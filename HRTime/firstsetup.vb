@@ -18,10 +18,19 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        MaterialTabControl1.SelectedTab = TabPage4
+        If DungeonNumeric1.Value = 0 Then
+            MessageBox.Show("Invalid amount.", "HRTime",
+            MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            MaterialTabControl1.SelectedTab = TabPage4
+        End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         OpenFileDialog1.ShowDialog()
+        OpenFileDialog1.Filter = "wav files (*.wav)|*.wav"
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
     End Sub
 End Class

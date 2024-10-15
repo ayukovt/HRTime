@@ -41,6 +41,7 @@ Partial Class firstsetup
         Label7 = New Label()
         Label6 = New Label()
         TabPage4 = New TabPage()
+        Button5 = New ReaLTaiizor.Controls.Button()
         Button4 = New ReaLTaiizor.Controls.Button()
         DungeonRichTextBox1 = New ReaLTaiizor.Controls.DungeonRichTextBox()
         Label10 = New Label()
@@ -50,7 +51,6 @@ Partial Class firstsetup
         TabPage7 = New TabPage()
         TabPage8 = New TabPage()
         OpenFileDialog1 = New OpenFileDialog()
-        Button5 = New ReaLTaiizor.Controls.Button()
         MaterialTabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
@@ -355,6 +355,25 @@ Partial Class firstsetup
         TabPage4.TabIndex = 3
         TabPage4.Text = "TabPage4"
         ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.Transparent
+        Button5.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        Button5.EnteredBorderColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
+        Button5.EnteredColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        Button5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button5.Image = Nothing
+        Button5.ImageAlign = ContentAlignment.MiddleLeft
+        Button5.InactiveColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        Button5.Location = New Point(573, 337)
+        Button5.Name = "Button5"
+        Button5.PressedBorderColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
+        Button5.PressedColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
+        Button5.Size = New Size(120, 40)
+        Button5.TabIndex = 4
+        Button5.Text = "Button5"
+        Button5.TextAlignment = StringAlignment.Center
+        ' 
         ' Button4
         ' 
         Button4.BackColor = Color.Transparent
@@ -454,25 +473,6 @@ Partial Class firstsetup
         ' OpenFileDialog1
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
-        ' 
-        ' Button5
-        ' 
-        Button5.BackColor = Color.Transparent
-        Button5.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
-        Button5.EnteredBorderColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
-        Button5.EnteredColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
-        Button5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Button5.Image = Nothing
-        Button5.ImageAlign = ContentAlignment.MiddleLeft
-        Button5.InactiveColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
-        Button5.Location = New Point(573, 337)
-        Button5.Name = "Button5"
-        Button5.PressedBorderColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
-        Button5.PressedColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
-        Button5.Size = New Size(120, 40)
-        Button5.TabIndex = 4
-        Button5.Text = "Button5"
-        Button5.TextAlignment = StringAlignment.Center
         ' 
         ' firstsetup
         ' 
