@@ -47,15 +47,22 @@ Partial Class firstsetup
         Label10 = New Label()
         Label9 = New Label()
         TabPage5 = New TabPage()
+        Button7 = New ReaLTaiizor.Controls.Button()
+        Button6 = New ReaLTaiizor.Controls.Button()
+        Label12 = New Label()
+        Label11 = New Label()
         TabPage6 = New TabPage()
-        TabPage7 = New TabPage()
-        TabPage8 = New TabPage()
+        Button8 = New ReaLTaiizor.Controls.Button()
+        Label14 = New Label()
+        Label13 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
         MaterialTabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
         TabPage3.SuspendLayout()
         TabPage4.SuspendLayout()
+        TabPage5.SuspendLayout()
+        TabPage6.SuspendLayout()
         SuspendLayout()
         ' 
         ' MaterialTabControl1
@@ -66,8 +73,6 @@ Partial Class firstsetup
         MaterialTabControl1.Controls.Add(TabPage4)
         MaterialTabControl1.Controls.Add(TabPage5)
         MaterialTabControl1.Controls.Add(TabPage6)
-        MaterialTabControl1.Controls.Add(TabPage7)
-        MaterialTabControl1.Controls.Add(TabPage8)
         MaterialTabControl1.Depth = 0
         MaterialTabControl1.Location = New Point(12, 12)
         MaterialTabControl1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER
@@ -251,7 +256,7 @@ Partial Class firstsetup
         DungeonNumeric1.ButtonForeColorB = Color.FromArgb(CByte(75), CByte(75), CByte(75))
         DungeonNumeric1.Font = New Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point)
         DungeonNumeric1.ForeColor = Color.FromArgb(CByte(76), CByte(76), CByte(76))
-        DungeonNumeric1.Location = New Point(68, 113)
+        DungeonNumeric1.Location = New Point(68, 114)
         DungeonNumeric1.Maximum = 100L
         DungeonNumeric1.Minimum = 0L
         DungeonNumeric1.MinimumSize = New Size(93, 28)
@@ -303,7 +308,7 @@ Partial Class firstsetup
         DungeonComboBox1.IntegralHeight = False
         DungeonComboBox1.ItemHeight = 20
         DungeonComboBox1.Items.AddRange(New Object() {"day(s)", "week(s)", "month(s)"})
-        DungeonComboBox1.Location = New Point(171, 114)
+        DungeonComboBox1.Location = New Point(171, 115)
         DungeonComboBox1.Name = "DungeonComboBox1"
         DungeonComboBox1.Size = New Size(106, 26)
         DungeonComboBox1.StartIndex = 0
@@ -313,7 +318,7 @@ Partial Class firstsetup
         ' 
         Label8.AutoSize = True
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(27, 119)
+        Label8.Location = New Point(27, 120)
         Label8.Name = "Label8"
         Label8.Size = New Size(35, 15)
         Label8.TabIndex = 2
@@ -359,19 +364,19 @@ Partial Class firstsetup
         ' 
         Button5.BackColor = Color.Transparent
         Button5.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
-        Button5.EnteredBorderColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
-        Button5.EnteredColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        Button5.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button5.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
         Button5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button5.Image = Nothing
         Button5.ImageAlign = ContentAlignment.MiddleLeft
-        Button5.InactiveColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
-        Button5.Location = New Point(573, 337)
+        Button5.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button5.Location = New Point(538, 337)
         Button5.Name = "Button5"
-        Button5.PressedBorderColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
-        Button5.PressedColor = Color.FromArgb(CByte(165), CByte(37), CByte(37))
-        Button5.Size = New Size(120, 40)
+        Button5.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button5.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button5.Size = New Size(179, 55)
         Button5.TabIndex = 4
-        Button5.Text = "Button5"
+        Button5.Text = "Next"
         Button5.TextAlignment = StringAlignment.Center
         ' 
         ' Button4
@@ -384,7 +389,7 @@ Partial Class firstsetup
         Button4.Image = Nothing
         Button4.ImageAlign = ContentAlignment.MiddleLeft
         Button4.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        Button4.Location = New Point(280, 114)
+        Button4.Location = New Point(280, 115)
         Button4.Name = "Button4"
         Button4.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
         Button4.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
@@ -401,7 +406,7 @@ Partial Class firstsetup
         DungeonRichTextBox1.EdgeColor = Color.White
         DungeonRichTextBox1.Font = New Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point)
         DungeonRichTextBox1.ForeColor = Color.FromArgb(CByte(76), CByte(76), CByte(76))
-        DungeonRichTextBox1.Location = New Point(27, 114)
+        DungeonRichTextBox1.Location = New Point(27, 115)
         DungeonRichTextBox1.Name = "DungeonRichTextBox1"
         DungeonRichTextBox1.ReadOnly = False
         DungeonRichTextBox1.Size = New Size(238, 27)
@@ -433,6 +438,10 @@ Partial Class firstsetup
         ' TabPage5
         ' 
         TabPage5.BackColor = Color.FromArgb(CByte(24), CByte(20), CByte(30))
+        TabPage5.Controls.Add(Button7)
+        TabPage5.Controls.Add(Button6)
+        TabPage5.Controls.Add(Label12)
+        TabPage5.Controls.Add(Label11)
         TabPage5.Location = New Point(4, 24)
         TabPage5.Name = "TabPage5"
         TabPage5.Padding = New Padding(3)
@@ -440,35 +449,117 @@ Partial Class firstsetup
         TabPage5.TabIndex = 4
         TabPage5.Text = "TabPage5"
         ' 
+        ' Button7
+        ' 
+        Button7.BackColor = Color.Transparent
+        Button7.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        Button7.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button7.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button7.Image = Nothing
+        Button7.ImageAlign = ContentAlignment.MiddleLeft
+        Button7.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button7.Location = New Point(184, 111)
+        Button7.Name = "Button7"
+        Button7.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button7.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button7.Size = New Size(120, 40)
+        Button7.TabIndex = 3
+        Button7.Text = "No"
+        Button7.TextAlignment = StringAlignment.Center
+        ' 
+        ' Button6
+        ' 
+        Button6.BackColor = Color.Transparent
+        Button6.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        Button6.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button6.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button6.Image = Nothing
+        Button6.ImageAlign = ContentAlignment.MiddleLeft
+        Button6.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button6.Location = New Point(27, 111)
+        Button6.Name = "Button6"
+        Button6.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button6.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button6.Size = New Size(120, 40)
+        Button6.TabIndex = 2
+        Button6.Text = "Yes"
+        Button6.TextAlignment = StringAlignment.Center
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.ForeColor = Color.White
+        Label12.Location = New Point(27, 69)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(395, 15)
+        Label12.TabIndex = 1
+        Label12.Text = "if yes, HRTime will run the updater as soon as a new update gets detected."
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.ForeColor = Color.White
+        Label11.Location = New Point(22, 26)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(586, 37)
+        Label11.TabIndex = 0
+        Label11.Text = "Do you want HRTime to automatically update?"
+        ' 
         ' TabPage6
         ' 
+        TabPage6.BackColor = Color.FromArgb(CByte(24), CByte(20), CByte(30))
+        TabPage6.Controls.Add(Button8)
+        TabPage6.Controls.Add(Label14)
+        TabPage6.Controls.Add(Label13)
         TabPage6.Location = New Point(4, 24)
         TabPage6.Name = "TabPage6"
         TabPage6.Padding = New Padding(3)
         TabPage6.Size = New Size(768, 398)
         TabPage6.TabIndex = 5
         TabPage6.Text = "TabPage6"
-        TabPage6.UseVisualStyleBackColor = True
         ' 
-        ' TabPage7
+        ' Button8
         ' 
-        TabPage7.Location = New Point(4, 24)
-        TabPage7.Name = "TabPage7"
-        TabPage7.Padding = New Padding(3)
-        TabPage7.Size = New Size(768, 398)
-        TabPage7.TabIndex = 6
-        TabPage7.Text = "TabPage7"
-        TabPage7.UseVisualStyleBackColor = True
+        Button8.BackColor = Color.Transparent
+        Button8.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        Button8.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button8.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button8.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button8.Image = Nothing
+        Button8.ImageAlign = ContentAlignment.MiddleLeft
+        Button8.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button8.Location = New Point(538, 337)
+        Button8.Name = "Button8"
+        Button8.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button8.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button8.Size = New Size(179, 55)
+        Button8.TabIndex = 2
+        Button8.Text = "Close"
+        Button8.TextAlignment = StringAlignment.Center
         ' 
-        ' TabPage8
+        ' Label14
         ' 
-        TabPage8.Location = New Point(4, 24)
-        TabPage8.Name = "TabPage8"
-        TabPage8.Padding = New Padding(3)
-        TabPage8.Size = New Size(768, 398)
-        TabPage8.TabIndex = 7
-        TabPage8.Text = "TabPage8"
-        TabPage8.UseVisualStyleBackColor = True
+        Label14.AutoSize = True
+        Label14.ForeColor = Color.White
+        Label14.Location = New Point(27, 69)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(555, 15)
+        Label14.TabIndex = 1
+        Label14.Text = "To change any of the settings, you can access the dashboard by right clicking the icon in the system tray"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.ForeColor = Color.White
+        Label13.Location = New Point(22, 26)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(133, 37)
+        Label13.TabIndex = 0
+        Label13.Text = "That's all!"
         ' 
         ' OpenFileDialog1
         ' 
@@ -492,6 +583,10 @@ Partial Class firstsetup
         TabPage3.PerformLayout()
         TabPage4.ResumeLayout(False)
         TabPage4.PerformLayout()
+        TabPage5.ResumeLayout(False)
+        TabPage5.PerformLayout()
+        TabPage6.ResumeLayout(False)
+        TabPage6.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -509,8 +604,6 @@ Partial Class firstsetup
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents TabPage6 As TabPage
-    Friend WithEvents TabPage7 As TabPage
-    Friend WithEvents TabPage8 As TabPage
     Friend WithEvents Button2 As ReaLTaiizor.Controls.Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label8 As Label
@@ -524,4 +617,11 @@ Partial Class firstsetup
     Friend WithEvents Label9 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Button5 As ReaLTaiizor.Controls.Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Button7 As ReaLTaiizor.Controls.Button
+    Friend WithEvents Button6 As ReaLTaiizor.Controls.Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Button8 As ReaLTaiizor.Controls.Button
 End Class
