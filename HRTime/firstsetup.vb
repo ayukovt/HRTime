@@ -19,11 +19,49 @@ Public Class firstsetup
                 Or InStr(MetroTextBox1.Text, "ogrehon", vbTextCompare) _
                 Or InStr(MetroTextBox1.Text, "ogre", vbTextCompare) _
                 Or InStr(MetroTextBox1.Text, "boymoder", vbTextCompare) _
-                Or InStr(MetroTextBox1.Text, "iwnbaw", vbTextCompare) _
-                Or InStr(MetroTextBox1.Text, "ngmi", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "manmoder", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "tranny", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "gorillamoder", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "brickhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "boomerhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "bitterhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "heighthon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "honmoder", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "innerhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "outerhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "rapehon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "reddithon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "ribcagehon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "shadowhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "shoulderhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "sneedhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "twinkhon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "iwnbam", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "gayden", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "poonbro", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "pooner", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "tunapoon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "gigapoon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "manlet", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "tranner", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "troon", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "transmaxxing", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "youngshit", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "midshit", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "oldshit", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "agp", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "husstuss", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "boyremove", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "trannerexia", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "luckshit", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "malefail", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "mog", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "mogging", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "mogs", vbTextCompare) _
+                Or InStr(MetroTextBox1.Text, "repper", vbTextCompare) _
                 Or InStr(MetroTextBox1.Text, "hsts", vbTextCompare) Then
-            Debug.WriteLine("4chan keyword msgbox")
-            MessageBox.Show("4chan keyword detected. please get off 4chan for your own good.", "HRTime",
+            Debug.WriteLine("4chan term msgbox")
+            MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
