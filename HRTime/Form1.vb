@@ -4,14 +4,18 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         WindowState = FormWindowState.Minimized
         Me.Opacity = 0
-        Dim firstSetup = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HRTime\", "firstsetup", Nothing)
-        If firstSetup = "false" Then
+        Dim firstSetupNeeded = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HRTime\", "firstsetup", Nothing)
+        If firstSetupNeeded = "false" Then
+            Debug.WriteLine("firstsetupneeded = " & firstSetupNeeded)
+            Debug.WriteLine("running handler tasks..")
             MsgBox("kiss ur sister")
         Else
-            If firstSetup Is Nothing Or Registry.CurrentUser.OpenSubKey("HRTime") Is Nothing Or firstSetup = "true" Then
+            If firstSetupNeeded Is Nothing Or Registry.CurrentUser.OpenSubKey("HRTime") Is Nothing Or firstSetupNeeded = "true" Then
+                Debug.WriteLine("firstsetupneeded = " & firstSetupNeeded)
+                Debug.WriteLine("running firstsetup..")
                 My.Computer.Registry.CurrentUser.CreateSubKey("HRTime")
                 Registry.SetValue("HKEY_CURRENT_USER\HRTime", "firstsetup", "true")
-                firstSetup.Show()
+                firstsetup.Show()
             End If
         End If
     End Sub

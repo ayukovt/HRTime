@@ -453,16 +453,16 @@ Partial Class firstsetup
         ' 
         Button7.BackColor = Color.Transparent
         Button7.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
-        Button7.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
-        Button7.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button7.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
+        Button7.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
         Button7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button7.Image = Nothing
         Button7.ImageAlign = ContentAlignment.MiddleLeft
-        Button7.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button7.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
         Button7.Location = New Point(184, 111)
         Button7.Name = "Button7"
-        Button7.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
-        Button7.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button7.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
+        Button7.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
         Button7.Size = New Size(120, 40)
         Button7.TabIndex = 3
         Button7.Text = "No"
@@ -472,16 +472,16 @@ Partial Class firstsetup
         ' 
         Button6.BackColor = Color.Transparent
         Button6.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
-        Button6.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
-        Button6.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button6.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
+        Button6.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
         Button6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button6.Image = Nothing
         Button6.ImageAlign = ContentAlignment.MiddleLeft
-        Button6.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        Button6.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
         Button6.Location = New Point(27, 111)
         Button6.Name = "Button6"
-        Button6.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
-        Button6.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        Button6.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
+        Button6.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
         Button6.Size = New Size(120, 40)
         Button6.TabIndex = 2
         Button6.Text = "Yes"
