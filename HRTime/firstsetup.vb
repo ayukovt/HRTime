@@ -1,4 +1,6 @@
-﻿Public Class firstsetup
+﻿Imports Microsoft.Win32
+
+Public Class firstsetup
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MaterialTabControl1.SelectedTab = TabPage2
     End Sub
@@ -55,6 +57,7 @@
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Registry.SetValue("HKEY_CURRENT_USER\HRTime", "firstsetup", "true")
         Me.Close()
     End Sub
 End Class

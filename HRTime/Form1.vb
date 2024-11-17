@@ -1,12 +1,18 @@
-﻿Public Class Form1
+﻿Imports Microsoft.Win32
+
+Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         WindowState = FormWindowState.Minimized
         Me.Opacity = 0
-        ' how do i make it not create a registry folder and instead make an actual REG_SZ key
-        If Microsoft.Win32.Registry.CurrentUser.OpenSubKey("firstsetup") Is Nothing Then
-            firstsetup.Show()
+        Dim firstSetup = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HRTime\", "firstsetup", Nothing)
+        If firstSetup = "false" Then
+            MsgBox("kiss ur sister")
         Else
-            MsgBox(":3")
+            If firstSetup Is Nothing Or Registry.CurrentUser.OpenSubKey("HRTime") Is Nothing Or firstSetup = "true" Then
+                My.Computer.Registry.CurrentUser.CreateSubKey("HRTime")
+                Registry.SetValue("HKEY_CURRENT_USER\HRTime", "firstsetup", "true")
+                firstSetup.Show()
+            End If
         End If
     End Sub
 End Class
