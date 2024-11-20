@@ -104,7 +104,7 @@ Partial Class firstsetup
         Button1.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
         Button1.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
         Button1.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        Button1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button1.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button1.Image = Nothing
         Button1.ImageAlign = ContentAlignment.MiddleLeft
         Button1.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
@@ -120,30 +120,30 @@ Partial Class firstsetup
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.Font = New Font("Poppins", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
         Label3.Location = New Point(26, 118)
         Label3.Name = "Label3"
-        Label3.Size = New Size(454, 30)
+        Label3.Size = New Size(504, 37)
         Label3.TabIndex = 2
         Label3.Text = "Let's set up a few things first to get you started."
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Font = New Font("Poppins", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
         Label2.Location = New Point(26, 88)
         Label2.Name = "Label2"
-        Label2.Size = New Size(440, 30)
+        Label2.Size = New Size(486, 37)
         Label2.TabIndex = 1
         Label2.Text = "It seems to be your first time running HRTime."
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Poppins SemiBold", 36F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(16, 23)
         Label1.Name = "Label1"
-        Label1.Size = New Size(185, 65)
+        Label1.Size = New Size(197, 84)
         Label1.TabIndex = 0
         Label1.Text = "Hello :)"
         ' 
@@ -167,7 +167,7 @@ Partial Class firstsetup
         Button2.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         Button2.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
         Button2.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        Button2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button2.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button2.Image = Nothing
         Button2.ImageAlign = ContentAlignment.MiddleLeft
         Button2.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
@@ -212,21 +212,22 @@ Partial Class firstsetup
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label5.ForeColor = Color.White
         Label5.Location = New Point(27, 69)
         Label5.Name = "Label5"
-        Label5.Size = New Size(644, 15)
+        Label5.Size = New Size(717, 22)
         Label5.TabIndex = 1
         Label5.Text = "ex. good girl, good boy, your name. More specifically this refers to the message box after you confirm you took your HRT"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Font = New Font("Poppins SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label4.ForeColor = Color.White
         Label4.Location = New Point(22, 26)
         Label4.Name = "Label4"
-        Label4.Size = New Size(451, 37)
+        Label4.Size = New Size(494, 48)
         Label4.TabIndex = 0
         Label4.Text = "How do you want to be referred to?"
         ' 
@@ -254,9 +255,9 @@ Partial Class firstsetup
         DungeonNumeric1.BorderColor = Color.FromArgb(CByte(180), CByte(180), CByte(180))
         DungeonNumeric1.ButtonForeColorA = Color.FromArgb(CByte(75), CByte(75), CByte(75))
         DungeonNumeric1.ButtonForeColorB = Color.FromArgb(CByte(75), CByte(75), CByte(75))
-        DungeonNumeric1.Font = New Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point)
+        DungeonNumeric1.Font = New Font("Poppins", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         DungeonNumeric1.ForeColor = Color.FromArgb(CByte(76), CByte(76), CByte(76))
-        DungeonNumeric1.Location = New Point(68, 114)
+        DungeonNumeric1.Location = New Point(79, 114)
         DungeonNumeric1.Maximum = 100L
         DungeonNumeric1.Minimum = 0L
         DungeonNumeric1.MinimumSize = New Size(93, 28)
@@ -301,14 +302,14 @@ Partial Class firstsetup
         DungeonComboBox1.DrawMode = DrawMode.OwnerDrawFixed
         DungeonComboBox1.DropDownHeight = 100
         DungeonComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
-        DungeonComboBox1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DungeonComboBox1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         DungeonComboBox1.ForeColor = Color.FromArgb(CByte(76), CByte(76), CByte(97))
         DungeonComboBox1.FormattingEnabled = True
         DungeonComboBox1.HoverSelectionColor = Color.Empty
         DungeonComboBox1.IntegralHeight = False
         DungeonComboBox1.ItemHeight = 20
         DungeonComboBox1.Items.AddRange(New Object() {"day(s)", "week(s)", "month(s)"})
-        DungeonComboBox1.Location = New Point(171, 115)
+        DungeonComboBox1.Location = New Point(182, 115)
         DungeonComboBox1.Name = "DungeonComboBox1"
         DungeonComboBox1.Size = New Size(106, 26)
         DungeonComboBox1.StartIndex = 0
@@ -317,31 +318,33 @@ Partial Class firstsetup
         ' Label8
         ' 
         Label8.AutoSize = True
+        Label8.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(27, 120)
+        Label8.Location = New Point(27, 117)
         Label8.Name = "Label8"
-        Label8.Size = New Size(35, 15)
+        Label8.Size = New Size(43, 22)
         Label8.TabIndex = 2
         Label8.Text = "every"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
+        Label7.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(27, 69)
         Label7.Name = "Label7"
-        Label7.Size = New Size(261, 15)
+        Label7.Size = New Size(294, 22)
         Label7.TabIndex = 1
         Label7.Text = "don't worry, you can change it later in settings :)"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.Font = New Font("Poppins SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label6.ForeColor = Color.White
         Label6.Location = New Point(22, 26)
         Label6.Name = "Label6"
-        Label6.Size = New Size(564, 37)
+        Label6.Size = New Size(618, 48)
         Label6.TabIndex = 0
         Label6.Text = "How often do you want the reminder to run?"
         ' 
@@ -366,7 +369,7 @@ Partial Class firstsetup
         Button5.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         Button5.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
         Button5.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        Button5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button5.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button5.Image = Nothing
         Button5.ImageAlign = ContentAlignment.MiddleLeft
         Button5.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
@@ -385,11 +388,11 @@ Partial Class firstsetup
         Button4.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         Button4.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
         Button4.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        Button4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Button4.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         Button4.Image = Nothing
         Button4.ImageAlign = ContentAlignment.MiddleLeft
         Button4.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        Button4.Location = New Point(280, 115)
+        Button4.Location = New Point(374, 115)
         Button4.Name = "Button4"
         Button4.PressedBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
         Button4.PressedColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
@@ -409,29 +412,30 @@ Partial Class firstsetup
         DungeonRichTextBox1.Location = New Point(27, 115)
         DungeonRichTextBox1.Name = "DungeonRichTextBox1"
         DungeonRichTextBox1.ReadOnly = False
-        DungeonRichTextBox1.Size = New Size(238, 27)
+        DungeonRichTextBox1.Size = New Size(341, 27)
         DungeonRichTextBox1.TabIndex = 2
         DungeonRichTextBox1.TextBackColor = Color.White
-        DungeonRichTextBox1.WordWrap = True
+        DungeonRichTextBox1.WordWrap = False
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
+        Label10.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label10.ForeColor = Color.White
         Label10.Location = New Point(27, 69)
         Label10.Name = "Label10"
-        Label10.Size = New Size(204, 15)
+        Label10.Size = New Size(233, 22)
         Label10.TabIndex = 1
         Label10.Text = "this can also be changed in settings :)"
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.Font = New Font("Poppins", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label9.ForeColor = Color.White
         Label9.Location = New Point(22, 26)
         Label9.Name = "Label9"
-        Label9.Size = New Size(533, 37)
+        Label9.Size = New Size(586, 48)
         Label9.TabIndex = 0
         Label9.Text = "What do you want your alert sound to be?"
         ' 
@@ -455,7 +459,7 @@ Partial Class firstsetup
         Button7.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         Button7.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
         Button7.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
-        Button7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button7.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button7.Image = Nothing
         Button7.ImageAlign = ContentAlignment.MiddleLeft
         Button7.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
@@ -474,7 +478,7 @@ Partial Class firstsetup
         Button6.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         Button6.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(151))
         Button6.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
-        Button6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button6.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button6.Image = Nothing
         Button6.ImageAlign = ContentAlignment.MiddleLeft
         Button6.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(58))
@@ -490,21 +494,22 @@ Partial Class firstsetup
         ' Label12
         ' 
         Label12.AutoSize = True
+        Label12.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label12.ForeColor = Color.White
         Label12.Location = New Point(27, 69)
         Label12.Name = "Label12"
-        Label12.Size = New Size(395, 15)
+        Label12.Size = New Size(444, 22)
         Label12.TabIndex = 1
         Label12.Text = "if yes, HRTime will run the updater as soon as a new update gets detected."
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.Font = New Font("Poppins SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.ForeColor = Color.White
         Label11.Location = New Point(22, 26)
         Label11.Name = "Label11"
-        Label11.Size = New Size(586, 37)
+        Label11.Size = New Size(652, 48)
         Label11.TabIndex = 0
         Label11.Text = "Do you want HRTime to automatically update?"
         ' 
@@ -527,7 +532,7 @@ Partial Class firstsetup
         Button8.BorderColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         Button8.EnteredBorderColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
         Button8.EnteredColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        Button8.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button8.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Button8.Image = Nothing
         Button8.ImageAlign = ContentAlignment.MiddleLeft
         Button8.InactiveColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
@@ -543,21 +548,22 @@ Partial Class firstsetup
         ' Label14
         ' 
         Label14.AutoSize = True
+        Label14.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label14.ForeColor = Color.White
         Label14.Location = New Point(27, 69)
         Label14.Name = "Label14"
-        Label14.Size = New Size(555, 15)
+        Label14.Size = New Size(631, 22)
         Label14.TabIndex = 1
         Label14.Text = "To change any of the settings, you can access the dashboard by right clicking the icon in the system tray"
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.Font = New Font("Poppins SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label13.ForeColor = Color.White
         Label13.Location = New Point(22, 26)
         Label13.Name = "Label13"
-        Label13.Size = New Size(133, 37)
+        Label13.Size = New Size(150, 48)
         Label13.TabIndex = 0
         Label13.Text = "That's all!"
         ' 

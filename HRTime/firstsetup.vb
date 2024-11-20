@@ -17,16 +17,16 @@ Public Class firstsetup
             MaterialTabControl1.SelectedTab = TabPage3
         End If
         Dim fourchanTerms As List(Of String) = New List(Of String) From {
-        "passoid", "hon", "gigahon", "ogrehon", "ogre", "boymoder",
-        "manmoder", "tranny", "gorillamoder", "brickhon", "boomerhon",
-        "bitterhon", "heighthon", "honmoder", "innerhon", "outerhon",
-        "rapehon", "reddithon", "ribcagehon", "shadowhon", "shoulderhon",
-        "sneedhon", "twinkhon", "iwnbam", "gayden", "poonbro",
-        "pooner", "tunapoon", "gigapoon", "manlet", "tranner",
-        "troon", "transmaxxing", "youngshit", "midshit", "oldshit",
-        "agp", "husstuss", "boyremove", "trannerexia", "luckshit",
-        "malefail", "mog", "mogging", "mogs", "repper", "hsts"
-        }
+            "passoid", "hon", "gigahon", "ogrehon", "ogre", "boymoder",
+            "manmoder", "tranny", "gorillamoder", "brickhon", "boomerhon",
+            "bitterhon", "heighthon", "honmoder", "innerhon", "outerhon",
+            "rapehon", "reddithon", "ribcagehon", "shadowhon", "shoulderhon",
+            "sneedhon", "twinkhon", "iwnbam", "gayden", "poonbro",
+            "pooner", "tunapoon", "gigapoon", "manlet", "tranner",
+            "troon", "transmaxxing", "youngshit", "midshit", "oldshit",
+            "agp", "husstuss", "boyremove", "trannerexia", "luckshit",
+            "malefail", "mog", "mogging", "mogs", "repper", "hsts"
+            }
         If fourchanTerms.Any(Function(term) InStr(MetroTextBox1.Text, term, vbTextCompare) > 0) Then
             Debug.WriteLine("4chan term msgbox")
             MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime",
