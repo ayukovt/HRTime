@@ -12,6 +12,8 @@ Public Class firstsetup
             MessageBox.Show("Please enter something in the text box first.", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
+            Registry.SetValue("HKEY_CURRENT_USER\HRTime", "name", MetroTextBox1.Text)
+            Debug.WriteLine("name = " & MetroTextBox1.Text)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
         Dim fourchanTerms As List(Of String) = New List(Of String) From {
@@ -24,11 +26,13 @@ Public Class firstsetup
         "troon", "transmaxxing", "youngshit", "midshit", "oldshit",
         "agp", "husstuss", "boyremove", "trannerexia", "luckshit",
         "malefail", "mog", "mogging", "mogs", "repper", "hsts"
-}
+        }
         If fourchanTerms.Any(Function(term) InStr(MetroTextBox1.Text, term, vbTextCompare) > 0) Then
             Debug.WriteLine("4chan term msgbox")
             MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Registry.SetValue("HKEY_CURRENT_USER\HRTime", "name", MetroTextBox1.Text)
+            Debug.WriteLine("name = " & MetroTextBox1.Text)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
     End Sub
