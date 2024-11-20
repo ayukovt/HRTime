@@ -30,6 +30,7 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(552, 225)
         Name = "Form1"
+        ShowInTaskbar = False
         Text = "handler (important thing dont close it pls)"
         ResumeLayout(False)
     End Sub
