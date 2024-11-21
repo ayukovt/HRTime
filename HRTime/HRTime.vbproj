@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="ReaLTaiizor" Version="3.8.0.5" />
+    <PackageReference Include="Svg" Version="3.4.7" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +44,11 @@
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
 
