@@ -62,6 +62,7 @@ Public Class firstsetup
             Else
                 MessageBox.Show("Idk what the fuck happened lol")
             End If
+            My.Settings.Save()
             MaterialTabControl1.SelectedTab = TabPage4
         End If
     End Sub
