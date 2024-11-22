@@ -300,13 +300,13 @@ Partial Class dashboard
         FoxButton1.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
         FoxButton1.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
         FoxButton1.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton1.DownColor = Color.FromArgb(CByte(97), CByte(71), CByte(140))
+        FoxButton1.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
         FoxButton1.EnabledCalc = True
         FoxButton1.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         FoxButton1.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
         FoxButton1.Location = New Point(11, 65)
         FoxButton1.Name = "FoxButton1"
-        FoxButton1.OverColor = Color.FromArgb(CByte(107), CByte(81), CByte(150))
+        FoxButton1.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
         FoxButton1.Size = New Size(92, 24)
         FoxButton1.TabIndex = 2
         FoxButton1.Text = "Change"

@@ -22,7 +22,6 @@
         Form1.NotifyIcon1.BalloonTipText = "Minimized to system tray."
         Form1.NotifyIcon1.ShowBalloonTip(500)
     End Sub
-
     Private Sub ForeverButton1_Click(sender As Object, e As EventArgs) Handles ForeverButton1.Click
         MoonLabel2.Text = "Username"
         MaterialTabControl1.SelectedTab = TabPage1
@@ -59,5 +58,44 @@
 
     Private Sub ForeverButton7_Click(sender As Object, e As EventArgs) Handles ForeverButton7.Click
         Me.Close()
+    End Sub
+    Public Sub URLOpen(Url As String)
+
+        Dim OpenURL As New ProcessStartInfo With {
+        .UseShellExecute = True,
+        .FileName = "explorer.exe",
+        .Arguments = Url
+    }
+
+        Process.Start(OpenURL)
+
+    End Sub
+
+    Private Sub ForeverButton9_Click(sender As Object, e As EventArgs) Handles ForeverButton9.Click
+        URLOpen("https://twitter.com/0xilis")
+    End Sub
+
+    Private Sub ForeverButton10_Click(sender As Object, e As EventArgs) Handles ForeverButton10.Click
+        URLOpen("https://twitter.com/kittymeowder")
+    End Sub
+
+    Private Sub ForeverButton11_Click(sender As Object, e As EventArgs) Handles ForeverButton11.Click
+        URLOpen("https://github.com/0xilis")
+    End Sub
+
+    Private Sub ForeverButton12_Click(sender As Object, e As EventArgs) Handles ForeverButton12.Click
+        URLOpen("https://www.github.com/Kat-Kipling")
+    End Sub
+
+    Private Sub FoxLinkLabel1_Click(sender As Object, e As EventArgs) Handles FoxLinkLabel1.Click
+        URLOpen(FoxLinkLabel1.Text)
+    End Sub
+
+    Private Sub FoxLinkLabel2_Click(sender As Object, e As EventArgs) Handles FoxLinkLabel2.Click
+        URLOpen(FoxLinkLabel2.Text)
+    End Sub
+
+    Private Sub NightLinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles NightLinkLabel1.LinkClicked
+        URLOpen("https://ko-fi.com/ayukovt")
     End Sub
 End Class
