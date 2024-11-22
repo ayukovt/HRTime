@@ -976,7 +976,6 @@ Partial Class dashboard
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
