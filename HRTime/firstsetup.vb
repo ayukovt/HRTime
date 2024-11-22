@@ -43,6 +43,25 @@ Public Class firstsetup
             MessageBox.Show("Invalid amount.", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
+            ' Logic for setting settings for schedule
+            ' As mentioned in the handler section, this is probably shit
+            ' Look into adding a Windows Task Scheduler entry for a job that runs based on the given interval and displays a form
+            ' I could do this in C# but no idea for VB!
+            If DungeonComboBox1.SelectedItem = "day(s)" Then
+                My.Settings.NextDoseDate = DateTime.Now.AddDays(DungeonNumeric1.Value)
+                My.Settings.INTERVAL_TYPE = "day"
+                My.Settings.INTERVAL_VALUE = DungeonNumeric1.Value
+            ElseIf DungeonComboBox1.SelectedItem = "weeks(s)" Then
+                My.Settings.NextDoseDate = DateTime.Now.AddDays(DungeonNumeric1.Value * 7) ' + 7 from the given value as we're adding days, but this is for week. 1 * 7 = 7, 2 * 7 = 14 (2 weeks), 3 * 7 = 21 (3 weeks), etc
+                My.Settings.INTERVAL_TYPE = "week"
+                My.Settings.INTERVAL_VALUE = DungeonNumeric1.Value * 7
+            ElseIf DungeonComboBox1.SelectedItem = "months(s)" Then
+                My.Settings.NextDoseDate = DateTime.Now.AddMonths(DungeonNumeric1.Value)
+                My.Settings.INTERVAL_TYPE = "month"
+                My.Settings.INTERVAL_VALUE = DungeonNumeric1.Value
+            Else
+                MessageBox.Show("Idk what the fuck happened lol")
+            End If
             MaterialTabControl1.SelectedTab = TabPage4
         End If
     End Sub

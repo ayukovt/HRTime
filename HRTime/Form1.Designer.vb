@@ -23,8 +23,9 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         NotifyIcon1 = New NotifyIcon(components)
+        Timer1 = New Timer(components)
         SuspendLayout()
         ' 
         ' NotifyIcon1
@@ -32,6 +33,9 @@ Partial Class Form1
         NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), Icon)
         NotifyIcon1.Text = "HRTime"
         NotifyIcon1.Visible = True
+        ' 
+        ' Timer1
+        ' 
         ' 
         ' Form1
         ' 
@@ -45,4 +49,5 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents Timer1 As Timer
 End Class

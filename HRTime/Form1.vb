@@ -1,4 +1,5 @@
-﻿Imports Microsoft.Win32
+﻿Imports System.Configuration
+Imports Microsoft.Win32
 
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -19,10 +20,23 @@ Public Class Form1
                 firstsetup.Show()
             End If
         End If
+        Timer1.In = True
     End Sub
 
     Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
         dashboard.Show()
         NotifyIcon1.Visible = False
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ' Logic for timer. Commented out as currently this'll open dialogs every tick in the minute it's scheduled for
+        ' Probably best to look into how to use VB to schedule a task in windows Task Scheduler, and schedule it in the setup section
+
+        'Dim now As DateTime = DateTime.Now
+        'If (My.Settings.NextDoseDate = now.Date) Then
+        'MessageBox.Show("Pog")
+        'Else
+        'Timer1.Start()
+        'End If
     End Sub
 End Class
