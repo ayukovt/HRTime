@@ -20,7 +20,7 @@ Public Class Form1
                 firstsetup.Show()
             End If
         End If
-        Timer1.In = True
+        Timer1.Enabled = True
     End Sub
 
     Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
