@@ -61,6 +61,7 @@ Partial Class dashboard
         MoonLabel8 = New ReaLTaiizor.Controls.MoonLabel()
         PictureBox3 = New PictureBox()
         TabPage6 = New TabPage()
+        FoxButton5 = New ReaLTaiizor.Controls.FoxButton()
         MoonLabel21 = New ReaLTaiizor.Controls.MoonLabel()
         MoonLabel20 = New ReaLTaiizor.Controls.MoonLabel()
         MoonLabel19 = New ReaLTaiizor.Controls.MoonLabel()
@@ -640,6 +641,7 @@ Partial Class dashboard
         ' TabPage6
         ' 
         TabPage6.BackColor = Color.FromArgb(CByte(22), CByte(19), CByte(29))
+        TabPage6.Controls.Add(FoxButton5)
         TabPage6.Controls.Add(MoonLabel21)
         TabPage6.Controls.Add(MoonLabel20)
         TabPage6.Controls.Add(MoonLabel19)
@@ -668,6 +670,25 @@ Partial Class dashboard
         TabPage6.Size = New Size(636, 329)
         TabPage6.TabIndex = 5
         TabPage6.Text = "TabPage6"
+        ' 
+        ' FoxButton5
+        ' 
+        FoxButton5.BackColor = Color.Transparent
+        FoxButton5.BaseColor = Color.FromArgb(CByte(249), CByte(249), CByte(249))
+        FoxButton5.BorderColor = Color.FromArgb(CByte(193), CByte(193), CByte(193))
+        FoxButton5.DisabledBaseColor = Color.FromArgb(CByte(249), CByte(249), CByte(249))
+        FoxButton5.DisabledBorderColor = Color.FromArgb(CByte(209), CByte(209), CByte(209))
+        FoxButton5.DisabledTextColor = Color.FromArgb(CByte(166), CByte(178), CByte(190))
+        FoxButton5.DownColor = Color.FromArgb(CByte(232), CByte(232), CByte(232))
+        FoxButton5.EnabledCalc = True
+        FoxButton5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton5.ForeColor = Color.FromArgb(CByte(66), CByte(78), CByte(90))
+        FoxButton5.Location = New Point(10, 198)
+        FoxButton5.Name = "FoxButton5"
+        FoxButton5.OverColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
+        FoxButton5.Size = New Size(134, 24)
+        FoxButton5.TabIndex = 22
+        FoxButton5.Text = "DEBUG - Show Alert"
         ' 
         ' MoonLabel21
         ' 
@@ -1036,4 +1057,5 @@ Partial Class dashboard
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents FoxButton5 As ReaLTaiizor.Controls.FoxButton
 End Class

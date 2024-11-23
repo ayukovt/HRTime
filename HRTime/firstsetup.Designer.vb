@@ -22,6 +22,7 @@ Partial Class firstsetup
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(firstsetup))
         MaterialTabControl1 = New ReaLTaiizor.Controls.MaterialTabControl()
         TabPage1 = New TabPage()
         Button1 = New ReaLTaiizor.Controls.Button()
@@ -56,6 +57,8 @@ Partial Class firstsetup
         Label14 = New Label()
         Label13 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
+        ForeverButton8 = New ReaLTaiizor.Controls.ForeverButton()
+        ForeverButton7 = New ReaLTaiizor.Controls.ForeverButton()
         MaterialTabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
@@ -552,9 +555,9 @@ Partial Class firstsetup
         Label14.ForeColor = Color.White
         Label14.Location = New Point(27, 69)
         Label14.Name = "Label14"
-        Label14.Size = New Size(631, 22)
+        Label14.Size = New Size(645, 22)
         Label14.TabIndex = 1
-        Label14.Text = "To change any of the settings, you can access the dashboard by right clicking the icon in the system tray"
+        Label14.Text = "To change any of the settings, you can access the dashboard by double clicking the icon in the system tray"
         ' 
         ' Label13
         ' 
@@ -571,14 +574,44 @@ Partial Class firstsetup
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' ForeverButton8
+        ' 
+        ForeverButton8.BackColor = Color.Transparent
+        ForeverButton8.BackgroundImage = CType(resources.GetObject("ForeverButton8.BackgroundImage"), Image)
+        ForeverButton8.BaseColor = Color.Transparent
+        ForeverButton8.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ForeverButton8.Location = New Point(675, 2)
+        ForeverButton8.Name = "ForeverButton8"
+        ForeverButton8.Rounded = False
+        ForeverButton8.Size = New Size(60, 60)
+        ForeverButton8.TabIndex = 10
+        ForeverButton8.TextColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
+        ' 
+        ' ForeverButton7
+        ' 
+        ForeverButton7.BackColor = Color.Transparent
+        ForeverButton7.BackgroundImage = CType(resources.GetObject("ForeverButton7.BackgroundImage"), Image)
+        ForeverButton7.BaseColor = Color.Transparent
+        ForeverButton7.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ForeverButton7.Location = New Point(738, 2)
+        ForeverButton7.Name = "ForeverButton7"
+        ForeverButton7.Rounded = False
+        ForeverButton7.Size = New Size(60, 60)
+        ForeverButton7.TabIndex = 9
+        ForeverButton7.TextColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
+        ' 
         ' firstsetup
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(24), CByte(20), CByte(30))
         ClientSize = New Size(800, 450)
+        Controls.Add(ForeverButton8)
+        Controls.Add(ForeverButton7)
         Controls.Add(MaterialTabControl1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "firstsetup"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "firstsetup"
         MaterialTabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
@@ -630,4 +663,6 @@ Partial Class firstsetup
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Button8 As ReaLTaiizor.Controls.Button
+    Friend WithEvents ForeverButton8 As ReaLTaiizor.Controls.ForeverButton
+    Friend WithEvents ForeverButton7 As ReaLTaiizor.Controls.ForeverButton
 End Class

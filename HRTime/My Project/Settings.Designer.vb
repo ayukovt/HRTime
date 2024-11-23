@@ -88,6 +88,54 @@ Namespace My
                 Me("INTERVAL_VALUE") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Username() As String
+            Get
+                Return CType(Me("Username"),String)
+            End Get
+            Set
+                Me("Username") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property AudioPath() As String
+            Get
+                Return CType(Me("AudioPath"),String)
+            End Get
+            Set
+                Me("AudioPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property AutoUpdate() As String
+            Get
+                Return CType(Me("AutoUpdate"),String)
+            End Get
+            Set
+                Me("AutoUpdate") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property FirstSetupNeeded() As String
+            Get
+                Return CType(Me("FirstSetupNeeded"),String)
+            End Get
+            Set
+                Me("FirstSetupNeeded") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

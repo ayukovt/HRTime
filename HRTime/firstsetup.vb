@@ -2,6 +2,24 @@
 Imports Microsoft.Win32
 
 Public Class firstsetup
+
+    Public Const WM_NCLBUTTONDOWN As Integer = &HA1
+    Public Const HT_CAPTION As Integer = &H2
+
+    <System.Runtime.InteropServices.DllImport("user32.dll")>
+    Public Shared Function SendMessage(ByVal hWnd As IntPtr, ByVal Msg As Integer, ByVal wParam As Integer, ByVal lParam As Integer) As Integer
+    End Function
+
+    <System.Runtime.InteropServices.DllImport("user32.dll")>
+    Public Shared Function ReleaseCapture() As Boolean
+    End Function
+
+    Private Sub firstsetup_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseDown
+        If e.Button = MouseButtons.Left Then
+            ReleaseCapture()
+            SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0)
+        End If
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MaterialTabControl1.SelectedTab = TabPage2
     End Sub
@@ -12,7 +30,8 @@ Public Class firstsetup
             MessageBox.Show("Please enter something in the text box first.", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Registry.SetValue("HKEY_CURRENT_USER\HRTime", "name", MetroTextBox1.Text)
+            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Save()
             Debug.WriteLine("name = " & MetroTextBox1.Text)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
@@ -31,7 +50,8 @@ Public Class firstsetup
             Debug.WriteLine("4chan term msgbox")
             MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Registry.SetValue("HKEY_CURRENT_USER\HRTime", "name", MetroTextBox1.Text)
+            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Save()
             Debug.WriteLine("name = " & MetroTextBox1.Text)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
@@ -46,7 +66,7 @@ Public Class firstsetup
             ' Logic for setting settings for schedule
             ' As mentioned in the handler section, this is probably shit
             ' Look into adding a Windows Task Scheduler entry for a job that runs based on the given interval and displays a form
-            ' I could do this in C# but no idea for VB!
+            ' I could do this in C# but no idea for VB! //and this is why I wanna do a C# rewrite one day i just cant be bothered rn to learn -ayu
             If DungeonComboBox1.SelectedItem = "day(s)" Then
                 My.Settings.NextDoseDate = DateTime.Now.AddDays(DungeonNumeric1.Value)
                 My.Settings.INTERVAL_TYPE = "day"
@@ -80,26 +100,30 @@ Public Class firstsetup
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         ' add a check for the right file extension and if the path is valid then proceed to tabpage5
-        Registry.SetValue("HKEY_CURRENT_USER\HRTime", "audiodir", DungeonRichTextBox1.Text)
+        My.Settings.AudioPath = DungeonRichTextBox1.Text
+        My.Settings.Save()
         Debug.WriteLine("audiodir = " & DungeonRichTextBox1.Text)
         MaterialTabControl1.SelectedTab = TabPage5
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         ' the buttons are bugged at least for me and the right color isnt applied idk ill try fixing it later
-        Registry.SetValue("HKEY_CURRENT_USER\HRTime", "autoupdate", "true")
+        My.Settings.AutoUpdate = "true"
+        My.Settings.Save()
         Debug.WriteLine("autoupdate = true")
         MaterialTabControl1.SelectedTab = TabPage6
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Registry.SetValue("HKEY_CURRENT_USER\HRTime", "autoupdate", "false")
+        My.Settings.AutoUpdate = "false"
+        My.Settings.Save()
         Debug.WriteLine("autoupdate = false")
         MaterialTabControl1.SelectedTab = TabPage6
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Registry.SetValue("HKEY_CURRENT_USER\HRTime", "firstsetup", "false")
+        My.Settings.FirstSetupNeeded = "false"
+        My.Settings.Save()
         Debug.WriteLine("firstsetup complete")
         Me.Close()
     End Sub

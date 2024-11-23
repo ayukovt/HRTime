@@ -98,4 +98,39 @@
     Private Sub NightLinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles NightLinkLabel1.LinkClicked
         URLOpen("https://ko-fi.com/ayukovt")
     End Sub
+
+    Private Sub FoxButton5_Click(sender As Object, e As EventArgs) Handles FoxButton5.Click
+        alert.Show()
+    End Sub
+
+    Private Sub dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MetroTextBox1.Text = My.Settings.Username
+        MetroTextBox2.Text = My.Settings.AudioPath
+    End Sub
+
+    Private Sub FoxButton1_Click(sender As Object, e As EventArgs) Handles FoxButton1.Click
+        My.Settings.Username = MetroTextBox1.Text
+        My.Settings.Save()
+    End Sub
+
+    Private Sub FoxButton2_Click(sender As Object, e As EventArgs) Handles FoxButton2.Click
+        My.Settings.AudioPath = MetroTextBox2.Text
+        My.Settings.Save()
+    End Sub
+
+    Private Sub FoxButton4_Click(sender As Object, e As EventArgs) Handles FoxButton4.Click
+        Dim resetConfirmation As DialogResult = MessageBox.Show("Are you sure you want to reset user settings?", "HRTime",
+        MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If resetConfirmation = Windows.Forms.DialogResult.Yes Then
+            My.Settings.Username = Nothing
+            My.Settings.NextDoseDate = Nothing
+            My.Settings.INTERVAL_TYPE = Nothing
+            My.Settings.INTERVAL_VALUE = Nothing
+            My.Settings.AudioPath = Nothing
+            My.Settings.AutoUpdate = Nothing
+            My.Settings.FirstSetupNeeded = "true"
+            My.Settings.Save()
+            Application.Restart()
+        End If
+    End Sub
 End Class
