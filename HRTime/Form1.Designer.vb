@@ -29,6 +29,7 @@ Partial Class Form1
         ExitToolStripMenuItem = New ToolStripMenuItem()
         Timer1 = New Timer(components)
         PictureBox1 = New PictureBox()
+        Label1 = New Label()
         ContextMenuStrip1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -62,15 +63,25 @@ Partial Class Form1
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(-1, -1)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(557, 229)
+        PictureBox1.Size = New Size(557, 226)
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(202, 26)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(41, 15)
+        Label1.TabIndex = 2
+        Label1.Text = "Label1"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(552, 225)
+        Controls.Add(Label1)
         Controls.Add(PictureBox1)
         Name = "Form1"
         ShowInTaskbar = False
@@ -78,6 +89,7 @@ Partial Class Form1
         ContextMenuStrip1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents NotifyIcon1 As NotifyIcon
@@ -85,4 +97,5 @@ Partial Class Form1
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

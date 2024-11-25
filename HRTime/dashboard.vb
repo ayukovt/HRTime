@@ -1,4 +1,6 @@
-﻿Public Class dashboard
+﻿Imports AutoUpdaterDotNET
+
+Public Class dashboard
 
     Public Const WM_NCLBUTTONDOWN As Integer = &HA1
     Public Const HT_CAPTION As Integer = &H2
@@ -80,11 +82,11 @@
     End Sub
 
     Private Sub ForeverButton11_Click(sender As Object, e As EventArgs) Handles ForeverButton11.Click
-        URLOpen("https://github.com/0xilis")
+        URLOpen("https://github.com/0xilis") ' mac (ew) user smh
     End Sub
 
     Private Sub ForeverButton12_Click(sender As Object, e As EventArgs) Handles ForeverButton12.Click
-        URLOpen("https://www.github.com/Kat-Kipling")
+        URLOpen("https://www.github.com/Kat-Kipling") ' goated dev ily kat mwahh (platonically)
     End Sub
 
     Private Sub FoxLinkLabel1_Click(sender As Object, e As EventArgs) Handles FoxLinkLabel1.Click
@@ -96,7 +98,7 @@
     End Sub
 
     Private Sub NightLinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles NightLinkLabel1.LinkClicked
-        URLOpen("https://ko-fi.com/ayukovt")
+        URLOpen("https://ko-fi.com/ayukovt") ' the pupy :3
     End Sub
 
     Private Sub FoxButton5_Click(sender As Object, e As EventArgs) Handles FoxButton5.Click
@@ -104,13 +106,36 @@
     End Sub
 
     Private Sub dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.AutoUpdate = "True" Then
+            ParrotCheckBox2.Checked = True
+            ParrotCheckBox1.Checked = True
+        End If
+        If My.Settings.AutoUpCheck = "True" Then
+            ParrotCheckBox1.Checked = True
+        End If
         MetroTextBox1.Text = My.Settings.Username
         MetroTextBox2.Text = My.Settings.AudioPath
     End Sub
 
     Private Sub FoxButton1_Click(sender As Object, e As EventArgs) Handles FoxButton1.Click
-        My.Settings.Username = MetroTextBox1.Text
-        My.Settings.Save()
+        If MetroTextBox1.Text = "" Then
+            Debug.WriteLine("textbox is empty msgbox")
+            MessageBox.Show("Please enter something in the text box first.", "HRTime",
+            MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Save()
+            Debug.WriteLine("name = " & MetroTextBox1.Text)
+            MaterialTabControl1.SelectedTab = TabPage3
+        End If
+        If fourchanTerms.Any(Function(term) InStr(MetroTextBox1.Text, term, vbTextCompare) > 0) Then
+            Debug.WriteLine("4chan term msgbox")
+            MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime",
+            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Save()
+            Debug.WriteLine("name = " & MetroTextBox1.Text)
+        End If
     End Sub
 
     Private Sub FoxButton2_Click(sender As Object, e As EventArgs) Handles FoxButton2.Click
@@ -133,4 +158,42 @@
             Application.Restart()
         End If
     End Sub
+
+    Private Sub FoxButton3_Click(sender As Object, e As EventArgs) Handles FoxButton3.Click
+        AutoUpdater.Start("https://rbsoft.org/updates/AutoUpdaterTest.xml")
+    End Sub
+
+    Private Sub ParrotCheckBox1_Click(sender As Object, e As EventArgs) Handles ParrotCheckBox1.Click
+        If ParrotCheckBox1.Checked = False Then ' its reversed bc the checkbox state changes *after* the click event btw
+            My.Settings.AutoUpCheck = "True"
+            My.Settings.Save()
+        Else
+            My.Settings.AutoUpCheck = "False"
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub ParrotCheckBox2_Click(sender As Object, e As EventArgs) Handles ParrotCheckBox2.Click
+        If ParrotCheckBox2.Checked = False Then ' same goes here
+            ParrotCheckBox1.Checked = True
+            My.Settings.AutoUpdate = "True"
+            My.Settings.AutoUpCheck = "True"
+            My.Settings.Save()
+        Else
+            My.Settings.AutoUpdate = "False"
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Dim fourchanTerms As List(Of String) = New List(Of String) From { ' copied from firstsetup bc apparently i cant just reference it in a different .vb file
+    "passoid", "hon", "gigahon", "ogrehon", "ogre", "boymoder",
+    "manmoder", "tranny", "gorillamoder", "brickhon", "boomerhon",
+    "bitterhon", "heighthon", "honmoder", "innerhon", "outerhon",
+    "rapehon", "reddithon", "ribcagehon", "shadowhon", "shoulderhon",
+    "sneedhon", "twinkhon", "iwnbam", "gayden", "poonbro",
+    "pooner", "tunapoon", "gigapoon", "manlet", "tranner",
+    "troon", "transmaxxing", "youngshit", "midshit", "oldshit",
+    "agp", "husstuss", "boyremove", "trannerexia", "luckshit",
+    "malefail", "mog", "mogging", "mogs", "repper", "hsts"
+    }
 End Class

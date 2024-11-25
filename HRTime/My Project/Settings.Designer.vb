@@ -136,6 +136,18 @@ Namespace My
                 Me("FirstSetupNeeded") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property AutoUpCheck() As String
+            Get
+                Return CType(Me("AutoUpCheck"),String)
+            End Get
+            Set
+                Me("AutoUpCheck") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

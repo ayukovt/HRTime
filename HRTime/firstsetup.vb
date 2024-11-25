@@ -108,14 +108,15 @@ Public Class firstsetup
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         ' the buttons are bugged at least for me and the right color isnt applied idk ill try fixing it later
-        My.Settings.AutoUpdate = "true"
+        My.Settings.AutoUpdate = "True"
+        My.Settings.AutoUpCheck = "True"
         My.Settings.Save()
         Debug.WriteLine("autoupdate = true")
         MaterialTabControl1.SelectedTab = TabPage6
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        My.Settings.AutoUpdate = "false"
+        My.Settings.AutoUpdate = "False"
         My.Settings.Save()
         Debug.WriteLine("autoupdate = false")
         MaterialTabControl1.SelectedTab = TabPage6

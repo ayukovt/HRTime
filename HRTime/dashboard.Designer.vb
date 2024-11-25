@@ -84,6 +84,8 @@ Partial Class dashboard
         PictureBox4 = New PictureBox()
         MoonLabel12 = New ReaLTaiizor.Controls.MoonLabel()
         MoonLabel11 = New ReaLTaiizor.Controls.MoonLabel()
+        MoonLabel22 = New ReaLTaiizor.Controls.MoonLabel()
+        MoonLabel23 = New ReaLTaiizor.Controls.MoonLabel()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -524,9 +526,9 @@ Partial Class dashboard
         MoonLabel7.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
         MoonLabel7.Location = New Point(7, 24)
         MoonLabel7.Name = "MoonLabel7"
-        MoonLabel7.Size = New Size(235, 22)
+        MoonLabel7.Size = New Size(88, 22)
         MoonLabel7.TabIndex = 2
-        MoonLabel7.Text = "Last checked: fucktillion years ago idfk"
+        MoonLabel7.Text = "Last checked:"
         ' 
         ' FoxButton3
         ' 
@@ -641,6 +643,8 @@ Partial Class dashboard
         ' TabPage6
         ' 
         TabPage6.BackColor = Color.FromArgb(CByte(22), CByte(19), CByte(29))
+        TabPage6.Controls.Add(MoonLabel23)
+        TabPage6.Controls.Add(MoonLabel22)
         TabPage6.Controls.Add(FoxButton5)
         TabPage6.Controls.Add(MoonLabel21)
         TabPage6.Controls.Add(MoonLabel20)
@@ -954,6 +958,28 @@ Partial Class dashboard
         MoonLabel11.TabIndex = 0
         MoonLabel11.Text = "HRTime 0.1a"
         ' 
+        ' MoonLabel22
+        ' 
+        MoonLabel22.AutoSize = True
+        MoonLabel22.BackColor = Color.Transparent
+        MoonLabel22.ForeColor = Color.Gray
+        MoonLabel22.Location = New Point(9, 229)
+        MoonLabel22.Name = "MoonLabel22"
+        MoonLabel22.Size = New Size(135, 15)
+        MoonLabel22.TabIndex = 23
+        MoonLabel22.Text = "DEBUG - Current date is:"
+        ' 
+        ' MoonLabel23
+        ' 
+        MoonLabel23.AutoSize = True
+        MoonLabel23.BackColor = Color.Transparent
+        MoonLabel23.ForeColor = Color.Gray
+        MoonLabel23.Location = New Point(150, 229)
+        MoonLabel23.Name = "MoonLabel23"
+        MoonLabel23.Size = New Size(79, 15)
+        MoonLabel23.TabIndex = 24
+        MoonLabel23.Text = "MoonLabel23"
+        ' 
         ' dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1058,4 +1084,6 @@ Partial Class dashboard
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents FoxButton5 As ReaLTaiizor.Controls.FoxButton
+    Friend WithEvents MoonLabel23 As ReaLTaiizor.Controls.MoonLabel
+    Friend WithEvents MoonLabel22 As ReaLTaiizor.Controls.MoonLabel
 End Class
