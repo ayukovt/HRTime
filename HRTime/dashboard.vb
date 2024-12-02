@@ -128,7 +128,6 @@ Public Class dashboard
             My.Settings.Username = ForeverTextBox1.Text
             My.Settings.Save()
             Debug.WriteLine("name = " & ForeverTextBox1.Text)
-            MaterialTabControl1.SelectedTab = TabPage3
         End If
         If fourchanTerms.Any(Function(term) InStr(ForeverTextBox1.Text, term, vbTextCompare) > 0) Then
             Debug.WriteLine("4chan term msgbox")

@@ -18,8 +18,21 @@ Public Class alert
             My.Settings.NextDoseDate = DateTime.Now.AddMonths(My.Settings.INTERVAL_VALUE)
         End If
         My.Settings.Save()
-        Form1.NotifyIcon1.BalloonTipText = "Next HRT reminder will run on: " & My.Settings.NextDoseDate
+        If cuteNamesHehe.Any(Function(term) term = My.Settings.Username) Then
+            MessageBox.Show(My.Settings.Username & "! Keep it up <3", "HRTime",
+            MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show("Good job, " & My.Settings.Username & "! Keep it up <3", "HRTime",
+            MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+        Form1.NotifyIcon1.BalloonTipText = "Your next HRT reminder will run on: " & My.Settings.NextDoseDate
         Form1.NotifyIcon1.ShowBalloonTip(500)
         Me.Close()
     End Sub
+
+    Dim cuteNamesHehe As List(Of String) = New List(Of String) From {
+    "good girl", "good boy", "good enby", "good puppy", "good kitty",
+    "good bunny", "good bun", "good rat", "good dog", "good cat", "good mouse",
+    "good mousie", "good poss", "good posombe", "good possum"
+    }
 End Class

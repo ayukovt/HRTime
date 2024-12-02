@@ -30,35 +30,35 @@ Partial Class firstsetup
         Label2 = New Label()
         Label1 = New Label()
         TabPage2 = New TabPage()
+        FoxButton2 = New ReaLTaiizor.Controls.FoxButton()
         ForeverTextBox1 = New ReaLTaiizor.Controls.ForeverTextBox()
         Label5 = New Label()
         Label4 = New Label()
         TabPage3 = New TabPage()
+        FoxButton3 = New ReaLTaiizor.Controls.FoxButton()
         DungeonNumeric1 = New ReaLTaiizor.Controls.DungeonNumeric()
         DungeonComboBox1 = New ReaLTaiizor.Controls.DungeonComboBox()
         Label8 = New Label()
         Label7 = New Label()
         Label6 = New Label()
         TabPage4 = New TabPage()
+        FoxButton5 = New ReaLTaiizor.Controls.FoxButton()
+        FoxButton4 = New ReaLTaiizor.Controls.FoxButton()
         ForeverTextBox2 = New ReaLTaiizor.Controls.ForeverTextBox()
         Label10 = New Label()
         Label9 = New Label()
         TabPage5 = New TabPage()
+        FoxButton7 = New ReaLTaiizor.Controls.FoxButton()
+        FoxButton6 = New ReaLTaiizor.Controls.FoxButton()
         Label12 = New Label()
         Label11 = New Label()
         TabPage6 = New TabPage()
+        FoxButton8 = New ReaLTaiizor.Controls.FoxButton()
         Label14 = New Label()
         Label13 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
         ForeverButton8 = New ReaLTaiizor.Controls.ForeverButton()
         ForeverButton7 = New ReaLTaiizor.Controls.ForeverButton()
-        FoxButton2 = New ReaLTaiizor.Controls.FoxButton()
-        FoxButton3 = New ReaLTaiizor.Controls.FoxButton()
-        FoxButton4 = New ReaLTaiizor.Controls.FoxButton()
-        FoxButton5 = New ReaLTaiizor.Controls.FoxButton()
-        FoxButton6 = New ReaLTaiizor.Controls.FoxButton()
-        FoxButton7 = New ReaLTaiizor.Controls.FoxButton()
-        FoxButton8 = New ReaLTaiizor.Controls.FoxButton()
         MaterialTabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
@@ -167,6 +167,25 @@ Partial Class firstsetup
         TabPage2.TabIndex = 1
         TabPage2.Text = "TabPage2"
         ' 
+        ' FoxButton2
+        ' 
+        FoxButton2.BackColor = Color.Transparent
+        FoxButton2.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton2.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton2.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton2.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton2.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton2.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton2.EnabledCalc = True
+        FoxButton2.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton2.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton2.Location = New Point(538, 337)
+        FoxButton2.Name = "FoxButton2"
+        FoxButton2.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton2.Size = New Size(179, 55)
+        FoxButton2.TabIndex = 7
+        FoxButton2.Text = "Next"
+        ' 
         ' ForeverTextBox1
         ' 
         ForeverTextBox1.BackColor = Color.Transparent
@@ -221,6 +240,25 @@ Partial Class firstsetup
         TabPage3.Size = New Size(768, 398)
         TabPage3.TabIndex = 2
         TabPage3.Text = "TabPage3"
+        ' 
+        ' FoxButton3
+        ' 
+        FoxButton3.BackColor = Color.Transparent
+        FoxButton3.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton3.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton3.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton3.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton3.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton3.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton3.EnabledCalc = True
+        FoxButton3.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton3.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton3.Location = New Point(538, 337)
+        FoxButton3.Name = "FoxButton3"
+        FoxButton3.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton3.Size = New Size(179, 55)
+        FoxButton3.TabIndex = 8
+        FoxButton3.Text = "Next"
         ' 
         ' DungeonNumeric1
         ' 
@@ -319,6 +357,44 @@ Partial Class firstsetup
         TabPage4.TabIndex = 3
         TabPage4.Text = "TabPage4"
         ' 
+        ' FoxButton5
+        ' 
+        FoxButton5.BackColor = Color.Transparent
+        FoxButton5.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton5.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton5.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton5.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton5.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton5.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton5.EnabledCalc = True
+        FoxButton5.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton5.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton5.Location = New Point(374, 115)
+        FoxButton5.Name = "FoxButton5"
+        FoxButton5.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton5.Size = New Size(81, 27)
+        FoxButton5.TabIndex = 8
+        FoxButton5.Text = "Browse"
+        ' 
+        ' FoxButton4
+        ' 
+        FoxButton4.BackColor = Color.Transparent
+        FoxButton4.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton4.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton4.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton4.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton4.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton4.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton4.EnabledCalc = True
+        FoxButton4.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton4.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton4.Location = New Point(538, 337)
+        FoxButton4.Name = "FoxButton4"
+        FoxButton4.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton4.Size = New Size(179, 55)
+        FoxButton4.TabIndex = 7
+        FoxButton4.Text = "Next"
+        ' 
         ' ForeverTextBox2
         ' 
         ForeverTextBox2.BackColor = Color.Transparent
@@ -372,6 +448,44 @@ Partial Class firstsetup
         TabPage5.TabIndex = 4
         TabPage5.Text = "TabPage5"
         ' 
+        ' FoxButton7
+        ' 
+        FoxButton7.BackColor = Color.Transparent
+        FoxButton7.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton7.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton7.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton7.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton7.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton7.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton7.EnabledCalc = True
+        FoxButton7.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton7.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton7.Location = New Point(184, 111)
+        FoxButton7.Name = "FoxButton7"
+        FoxButton7.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton7.Size = New Size(120, 40)
+        FoxButton7.TabIndex = 9
+        FoxButton7.Text = "No"
+        ' 
+        ' FoxButton6
+        ' 
+        FoxButton6.BackColor = Color.Transparent
+        FoxButton6.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton6.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton6.EnabledCalc = True
+        FoxButton6.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton6.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton6.Location = New Point(27, 111)
+        FoxButton6.Name = "FoxButton6"
+        FoxButton6.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton6.Size = New Size(120, 40)
+        FoxButton6.TabIndex = 8
+        FoxButton6.Text = "Yes"
+        ' 
         ' Label12
         ' 
         Label12.AutoSize = True
@@ -406,6 +520,25 @@ Partial Class firstsetup
         TabPage6.Size = New Size(768, 398)
         TabPage6.TabIndex = 5
         TabPage6.Text = "TabPage6"
+        ' 
+        ' FoxButton8
+        ' 
+        FoxButton8.BackColor = Color.Transparent
+        FoxButton8.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton8.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton8.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton8.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton8.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton8.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton8.EnabledCalc = True
+        FoxButton8.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton8.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton8.Location = New Point(538, 337)
+        FoxButton8.Name = "FoxButton8"
+        FoxButton8.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton8.Size = New Size(179, 55)
+        FoxButton8.TabIndex = 8
+        FoxButton8.Text = "Close"
         ' 
         ' Label14
         ' 
@@ -458,139 +591,6 @@ Partial Class firstsetup
         ForeverButton7.Size = New Size(60, 60)
         ForeverButton7.TabIndex = 9
         ForeverButton7.TextColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
-        ' 
-        ' FoxButton2
-        ' 
-        FoxButton2.BackColor = Color.Transparent
-        FoxButton2.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton2.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton2.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton2.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton2.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton2.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
-        FoxButton2.EnabledCalc = True
-        FoxButton2.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        FoxButton2.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton2.Location = New Point(538, 337)
-        FoxButton2.Name = "FoxButton2"
-        FoxButton2.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
-        FoxButton2.Size = New Size(179, 55)
-        FoxButton2.TabIndex = 7
-        FoxButton2.Text = "Next"
-        ' 
-        ' FoxButton3
-        ' 
-        FoxButton3.BackColor = Color.Transparent
-        FoxButton3.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton3.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton3.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton3.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton3.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton3.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
-        FoxButton3.EnabledCalc = True
-        FoxButton3.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        FoxButton3.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton3.Location = New Point(538, 337)
-        FoxButton3.Name = "FoxButton3"
-        FoxButton3.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
-        FoxButton3.Size = New Size(179, 55)
-        FoxButton3.TabIndex = 8
-        FoxButton3.Text = "Next"
-        ' 
-        ' FoxButton4
-        ' 
-        FoxButton4.BackColor = Color.Transparent
-        FoxButton4.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton4.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton4.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton4.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton4.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton4.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
-        FoxButton4.EnabledCalc = True
-        FoxButton4.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        FoxButton4.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton4.Location = New Point(538, 337)
-        FoxButton4.Name = "FoxButton4"
-        FoxButton4.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
-        FoxButton4.Size = New Size(179, 55)
-        FoxButton4.TabIndex = 7
-        FoxButton4.Text = "Next"
-        ' 
-        ' FoxButton5
-        ' 
-        FoxButton5.BackColor = Color.Transparent
-        FoxButton5.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton5.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton5.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton5.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton5.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton5.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
-        FoxButton5.EnabledCalc = True
-        FoxButton5.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        FoxButton5.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton5.Location = New Point(374, 115)
-        FoxButton5.Name = "FoxButton5"
-        FoxButton5.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
-        FoxButton5.Size = New Size(81, 27)
-        FoxButton5.TabIndex = 8
-        FoxButton5.Text = "Browse"
-        ' 
-        ' FoxButton6
-        ' 
-        FoxButton6.BackColor = Color.Transparent
-        FoxButton6.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton6.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton6.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton6.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton6.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton6.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
-        FoxButton6.EnabledCalc = True
-        FoxButton6.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        FoxButton6.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton6.Location = New Point(27, 111)
-        FoxButton6.Name = "FoxButton6"
-        FoxButton6.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
-        FoxButton6.Size = New Size(120, 40)
-        FoxButton6.TabIndex = 8
-        FoxButton6.Text = "Yes"
-        ' 
-        ' FoxButton7
-        ' 
-        FoxButton7.BackColor = Color.Transparent
-        FoxButton7.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton7.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton7.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton7.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton7.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton7.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
-        FoxButton7.EnabledCalc = True
-        FoxButton7.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        FoxButton7.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton7.Location = New Point(184, 111)
-        FoxButton7.Name = "FoxButton7"
-        FoxButton7.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
-        FoxButton7.Size = New Size(120, 40)
-        FoxButton7.TabIndex = 9
-        FoxButton7.Text = "No"
-        ' 
-        ' FoxButton8
-        ' 
-        FoxButton8.BackColor = Color.Transparent
-        FoxButton8.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton8.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton8.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton8.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
-        FoxButton8.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton8.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
-        FoxButton8.EnabledCalc = True
-        FoxButton8.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        FoxButton8.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        FoxButton8.Location = New Point(538, 337)
-        FoxButton8.Name = "FoxButton8"
-        FoxButton8.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
-        FoxButton8.Size = New Size(179, 55)
-        FoxButton8.TabIndex = 8
-        FoxButton8.Text = "Close"
         ' 
         ' firstsetup
         ' 

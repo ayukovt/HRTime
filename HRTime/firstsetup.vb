@@ -24,7 +24,7 @@ Public Class firstsetup
         MaterialTabControl1.SelectedTab = TabPage2
     End Sub
 
-    Private Sub FoxButton2_Click(sender As Object, e As EventArgs)
+    Private Sub FoxButton2_Click(sender As Object, e As EventArgs) Handles FoxButton2.Click
         If ForeverTextBox1.Text = "" Then
             Debug.WriteLine("textbox is empty msgbox")
             MessageBox.Show("Please enter something in the text box first.", "HRTime",
@@ -57,7 +57,7 @@ Public Class firstsetup
         End If
     End Sub
 
-    Private Sub FoxButton3_Click(sender As Object, e As EventArgs)
+    Private Sub FoxButton3_Click(sender As Object, e As EventArgs) Handles FoxButton3.Click
         If DungeonNumeric1.Value = 0 Then
             Debug.WriteLine("invald amount msgbox")
             MessageBox.Show("Invalid amount.", "HRTime",
@@ -87,7 +87,7 @@ Public Class firstsetup
         End If
     End Sub
 
-    Private Sub FoxButton4_Click(sender As Object, e As EventArgs)
+    Private Sub FoxButton5_Click(sender As Object, e As EventArgs) Handles FoxButton5.Click
         OpenFileDialog1.Filter = "wav files|*.wav"
         OpenFileDialog1.Title = "Select the reminder audio file"
         OpenFileDialog1.ShowDialog()
@@ -98,7 +98,7 @@ Public Class firstsetup
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
     End Sub
 
-    Private Sub FoxButton5_Click(sender As Object, e As EventArgs)
+    Private Sub FoxButton4_Click(sender As Object, e As EventArgs) Handles FoxButton4.Click
         ' add a check for the right file extension and if the path is valid then proceed to tabpage5
         My.Settings.AudioPath = ForeverTextBox2.Text
         My.Settings.Save()
@@ -106,7 +106,7 @@ Public Class firstsetup
         MaterialTabControl1.SelectedTab = TabPage5
     End Sub
 
-    Private Sub FoxButton6_Click(sender As Object, e As EventArgs)
+    Private Sub FoxButton6_Click(sender As Object, e As EventArgs) Handles FoxButton6.Click
         My.Settings.AutoUpdate = "True"
         My.Settings.AutoUpCheck = "True"
         My.Settings.Save()
@@ -114,17 +114,29 @@ Public Class firstsetup
         MaterialTabControl1.SelectedTab = TabPage6
     End Sub
 
-    Private Sub FoxButton7_Click(sender As Object, e As EventArgs)
+    Private Sub FoxButton7_Click(sender As Object, e As EventArgs) Handles FoxButton7.Click
         My.Settings.AutoUpdate = "False"
         My.Settings.Save()
         Debug.WriteLine("autoupdate = false")
         MaterialTabControl1.SelectedTab = TabPage6
     End Sub
 
-    Private Sub FoxButton8_Click(sender As Object, e As EventArgs)
+    Private Sub FoxButton8_Click(sender As Object, e As EventArgs) Handles FoxButton8.Click
         My.Settings.FirstSetupNeeded = "false"
         My.Settings.Save()
         Debug.WriteLine("firstsetup complete")
         Me.Close()
+    End Sub
+
+    Private Sub ForeverButton8_Click(sender As Object, e As EventArgs) Handles ForeverButton8.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub ForeverButton7_Click(sender As Object, e As EventArgs) Handles ForeverButton7.Click
+        Dim exitConfirmation As DialogResult = MessageBox.Show("Do you want to exit? Any unsaved settings will be lost.", "HRTime",
+        MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If exitConfirmation = Windows.Forms.DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class
