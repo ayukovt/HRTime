@@ -38,15 +38,16 @@ Partial Class dashboard
         ForeverButton8 = New ReaLTaiizor.Controls.ForeverButton()
         MaterialTabControl1 = New ReaLTaiizor.Controls.MaterialTabControl()
         TabPage1 = New TabPage()
+        ForeverTextBox1 = New ReaLTaiizor.Controls.ForeverTextBox()
         FoxButton1 = New ReaLTaiizor.Controls.FoxButton()
         MoonLabel3 = New ReaLTaiizor.Controls.MoonLabel()
-        MetroTextBox1 = New ReaLTaiizor.Controls.MetroTextBox()
         TabPage2 = New TabPage()
         PictureBox2 = New PictureBox()
         MoonLabel4 = New ReaLTaiizor.Controls.MoonLabel()
         TabPage3 = New TabPage()
+        FoxButton6 = New ReaLTaiizor.Controls.FoxButton()
+        ForeverTextBox2 = New ReaLTaiizor.Controls.ForeverTextBox()
         FoxButton2 = New ReaLTaiizor.Controls.FoxButton()
-        MetroTextBox2 = New ReaLTaiizor.Controls.MetroTextBox()
         MoonLabel5 = New ReaLTaiizor.Controls.MoonLabel()
         TabPage4 = New TabPage()
         ParrotCheckBox2 = New ReaLTaiizor.Controls.ParrotCheckBox()
@@ -61,6 +62,8 @@ Partial Class dashboard
         MoonLabel8 = New ReaLTaiizor.Controls.MoonLabel()
         PictureBox3 = New PictureBox()
         TabPage6 = New TabPage()
+        MoonLabel23 = New ReaLTaiizor.Controls.MoonLabel()
+        MoonLabel22 = New ReaLTaiizor.Controls.MoonLabel()
         FoxButton5 = New ReaLTaiizor.Controls.FoxButton()
         MoonLabel21 = New ReaLTaiizor.Controls.MoonLabel()
         MoonLabel20 = New ReaLTaiizor.Controls.MoonLabel()
@@ -84,8 +87,7 @@ Partial Class dashboard
         PictureBox4 = New PictureBox()
         MoonLabel12 = New ReaLTaiizor.Controls.MoonLabel()
         MoonLabel11 = New ReaLTaiizor.Controls.MoonLabel()
-        MoonLabel22 = New ReaLTaiizor.Controls.MoonLabel()
-        MoonLabel23 = New ReaLTaiizor.Controls.MoonLabel()
+        OpenFileDialog1 = New OpenFileDialog()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -285,15 +287,32 @@ Partial Class dashboard
         ' TabPage1
         ' 
         TabPage1.BackColor = Color.FromArgb(CByte(22), CByte(19), CByte(29))
+        TabPage1.Controls.Add(ForeverTextBox1)
         TabPage1.Controls.Add(FoxButton1)
         TabPage1.Controls.Add(MoonLabel3)
-        TabPage1.Controls.Add(MetroTextBox1)
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(636, 329)
         TabPage1.TabIndex = 0
         TabPage1.Text = "TabPage1"
+        ' 
+        ' ForeverTextBox1
+        ' 
+        ForeverTextBox1.BackColor = Color.Transparent
+        ForeverTextBox1.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        ForeverTextBox1.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        ForeverTextBox1.FocusOnHover = False
+        ForeverTextBox1.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        ForeverTextBox1.Location = New Point(11, 29)
+        ForeverTextBox1.MaxLength = 32767
+        ForeverTextBox1.Multiline = False
+        ForeverTextBox1.Name = "ForeverTextBox1"
+        ForeverTextBox1.ReadOnly = False
+        ForeverTextBox1.Size = New Size(206, 29)
+        ForeverTextBox1.TabIndex = 7
+        ForeverTextBox1.TextAlign = HorizontalAlignment.Left
+        ForeverTextBox1.UseSystemPasswordChar = False
         ' 
         ' FoxButton1
         ' 
@@ -326,35 +345,6 @@ Partial Class dashboard
         MoonLabel3.TabIndex = 1
         MoonLabel3.Text = "Current Username"
         ' 
-        ' MetroTextBox1
-        ' 
-        MetroTextBox1.AutoCompleteCustomSource = Nothing
-        MetroTextBox1.AutoCompleteMode = AutoCompleteMode.None
-        MetroTextBox1.AutoCompleteSource = AutoCompleteSource.None
-        MetroTextBox1.BorderColor = Color.FromArgb(CByte(155), CByte(155), CByte(155))
-        MetroTextBox1.DisabledBackColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
-        MetroTextBox1.DisabledBorderColor = Color.FromArgb(CByte(155), CByte(155), CByte(155))
-        MetroTextBox1.DisabledForeColor = Color.FromArgb(CByte(136), CByte(136), CByte(136))
-        MetroTextBox1.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        MetroTextBox1.HoverColor = Color.FromArgb(CByte(102), CByte(102), CByte(102))
-        MetroTextBox1.Image = Nothing
-        MetroTextBox1.IsDerivedStyle = True
-        MetroTextBox1.Lines = Nothing
-        MetroTextBox1.Location = New Point(11, 29)
-        MetroTextBox1.MaxLength = 32767
-        MetroTextBox1.Multiline = False
-        MetroTextBox1.Name = "MetroTextBox1"
-        MetroTextBox1.ReadOnly = False
-        MetroTextBox1.Size = New Size(180, 25)
-        MetroTextBox1.Style = ReaLTaiizor.Enum.Metro.Style.Light
-        MetroTextBox1.StyleManager = Nothing
-        MetroTextBox1.TabIndex = 0
-        MetroTextBox1.TextAlign = HorizontalAlignment.Left
-        MetroTextBox1.ThemeAuthor = "Taiizor"
-        MetroTextBox1.ThemeName = "MetroLight"
-        MetroTextBox1.UseSystemPasswordChar = False
-        MetroTextBox1.WatermarkText = ""
-        ' 
         ' TabPage2
         ' 
         TabPage2.BackColor = Color.FromArgb(CByte(22), CByte(19), CByte(29))
@@ -382,7 +372,7 @@ Partial Class dashboard
         MoonLabel4.BackColor = Color.Transparent
         MoonLabel4.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
         MoonLabel4.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
-        MoonLabel4.Location = New Point(104, 194)
+        MoonLabel4.Location = New Point(104, 191)
         MoonLabel4.Name = "MoonLabel4"
         MoonLabel4.Size = New Size(438, 28)
         MoonLabel4.TabIndex = 0
@@ -391,8 +381,9 @@ Partial Class dashboard
         ' TabPage3
         ' 
         TabPage3.BackColor = Color.FromArgb(CByte(22), CByte(19), CByte(29))
+        TabPage3.Controls.Add(FoxButton6)
+        TabPage3.Controls.Add(ForeverTextBox2)
         TabPage3.Controls.Add(FoxButton2)
-        TabPage3.Controls.Add(MetroTextBox2)
         TabPage3.Controls.Add(MoonLabel5)
         TabPage3.Location = New Point(4, 24)
         TabPage3.Name = "TabPage3"
@@ -400,6 +391,42 @@ Partial Class dashboard
         TabPage3.Size = New Size(636, 329)
         TabPage3.TabIndex = 2
         TabPage3.Text = "TabPage3"
+        ' 
+        ' FoxButton6
+        ' 
+        FoxButton6.BackColor = Color.Transparent
+        FoxButton6.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.DisabledBaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.DisabledBorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        FoxButton6.DisabledTextColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton6.DownColor = Color.FromArgb(CByte(52), CByte(42), CByte(69))
+        FoxButton6.EnabledCalc = True
+        FoxButton6.Font = New Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        FoxButton6.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        FoxButton6.Location = New Point(267, 31)
+        FoxButton6.Name = "FoxButton6"
+        FoxButton6.OverColor = Color.FromArgb(CByte(62), CByte(47), CByte(87))
+        FoxButton6.Size = New Size(75, 24)
+        FoxButton6.TabIndex = 8
+        FoxButton6.Text = "Browse"
+        ' 
+        ' ForeverTextBox2
+        ' 
+        ForeverTextBox2.BackColor = Color.Transparent
+        ForeverTextBox2.BaseColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        ForeverTextBox2.BorderColor = Color.FromArgb(CByte(42), CByte(32), CByte(59))
+        ForeverTextBox2.FocusOnHover = False
+        ForeverTextBox2.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        ForeverTextBox2.Location = New Point(11, 29)
+        ForeverTextBox2.MaxLength = 32767
+        ForeverTextBox2.Multiline = False
+        ForeverTextBox2.Name = "ForeverTextBox2"
+        ForeverTextBox2.ReadOnly = False
+        ForeverTextBox2.Size = New Size(250, 29)
+        ForeverTextBox2.TabIndex = 7
+        ForeverTextBox2.TextAlign = HorizontalAlignment.Left
+        ForeverTextBox2.UseSystemPasswordChar = False
         ' 
         ' FoxButton2
         ' 
@@ -419,35 +446,6 @@ Partial Class dashboard
         FoxButton2.Size = New Size(92, 24)
         FoxButton2.TabIndex = 2
         FoxButton2.Text = "Change"
-        ' 
-        ' MetroTextBox2
-        ' 
-        MetroTextBox2.AutoCompleteCustomSource = Nothing
-        MetroTextBox2.AutoCompleteMode = AutoCompleteMode.None
-        MetroTextBox2.AutoCompleteSource = AutoCompleteSource.None
-        MetroTextBox2.BorderColor = Color.FromArgb(CByte(155), CByte(155), CByte(155))
-        MetroTextBox2.DisabledBackColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
-        MetroTextBox2.DisabledBorderColor = Color.FromArgb(CByte(155), CByte(155), CByte(155))
-        MetroTextBox2.DisabledForeColor = Color.FromArgb(CByte(136), CByte(136), CByte(136))
-        MetroTextBox2.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        MetroTextBox2.HoverColor = Color.FromArgb(CByte(102), CByte(102), CByte(102))
-        MetroTextBox2.Image = Nothing
-        MetroTextBox2.IsDerivedStyle = True
-        MetroTextBox2.Lines = Nothing
-        MetroTextBox2.Location = New Point(11, 29)
-        MetroTextBox2.MaxLength = 32767
-        MetroTextBox2.Multiline = False
-        MetroTextBox2.Name = "MetroTextBox2"
-        MetroTextBox2.ReadOnly = False
-        MetroTextBox2.Size = New Size(180, 25)
-        MetroTextBox2.Style = ReaLTaiizor.Enum.Metro.Style.Light
-        MetroTextBox2.StyleManager = Nothing
-        MetroTextBox2.TabIndex = 1
-        MetroTextBox2.TextAlign = HorizontalAlignment.Left
-        MetroTextBox2.ThemeAuthor = "Taiizor"
-        MetroTextBox2.ThemeName = "MetroLight"
-        MetroTextBox2.UseSystemPasswordChar = False
-        MetroTextBox2.WatermarkText = ""
         ' 
         ' MoonLabel5
         ' 
@@ -674,6 +672,28 @@ Partial Class dashboard
         TabPage6.Size = New Size(636, 329)
         TabPage6.TabIndex = 5
         TabPage6.Text = "TabPage6"
+        ' 
+        ' MoonLabel23
+        ' 
+        MoonLabel23.AutoSize = True
+        MoonLabel23.BackColor = Color.Transparent
+        MoonLabel23.ForeColor = Color.Gray
+        MoonLabel23.Location = New Point(150, 229)
+        MoonLabel23.Name = "MoonLabel23"
+        MoonLabel23.Size = New Size(79, 15)
+        MoonLabel23.TabIndex = 24
+        MoonLabel23.Text = "MoonLabel23"
+        ' 
+        ' MoonLabel22
+        ' 
+        MoonLabel22.AutoSize = True
+        MoonLabel22.BackColor = Color.Transparent
+        MoonLabel22.ForeColor = Color.Gray
+        MoonLabel22.Location = New Point(9, 229)
+        MoonLabel22.Name = "MoonLabel22"
+        MoonLabel22.Size = New Size(135, 15)
+        MoonLabel22.TabIndex = 23
+        MoonLabel22.Text = "DEBUG - Current date is:"
         ' 
         ' FoxButton5
         ' 
@@ -958,27 +978,9 @@ Partial Class dashboard
         MoonLabel11.TabIndex = 0
         MoonLabel11.Text = "HRTime 0.1a"
         ' 
-        ' MoonLabel22
+        ' OpenFileDialog1
         ' 
-        MoonLabel22.AutoSize = True
-        MoonLabel22.BackColor = Color.Transparent
-        MoonLabel22.ForeColor = Color.Gray
-        MoonLabel22.Location = New Point(9, 229)
-        MoonLabel22.Name = "MoonLabel22"
-        MoonLabel22.Size = New Size(135, 15)
-        MoonLabel22.TabIndex = 23
-        MoonLabel22.Text = "DEBUG - Current date is:"
-        ' 
-        ' MoonLabel23
-        ' 
-        MoonLabel23.AutoSize = True
-        MoonLabel23.BackColor = Color.Transparent
-        MoonLabel23.ForeColor = Color.Gray
-        MoonLabel23.Location = New Point(150, 229)
-        MoonLabel23.Name = "MoonLabel23"
-        MoonLabel23.Size = New Size(79, 15)
-        MoonLabel23.TabIndex = 24
-        MoonLabel23.Text = "MoonLabel23"
+        OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
         ' dashboard
         ' 
@@ -1044,12 +1046,10 @@ Partial Class dashboard
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents TabPage6 As TabPage
     Friend WithEvents MoonLabel3 As ReaLTaiizor.Controls.MoonLabel
-    Friend WithEvents MetroTextBox1 As ReaLTaiizor.Controls.MetroTextBox
     Friend WithEvents FoxButton1 As ReaLTaiizor.Controls.FoxButton
     Friend WithEvents MoonLabel4 As ReaLTaiizor.Controls.MoonLabel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents FoxButton2 As ReaLTaiizor.Controls.FoxButton
-    Friend WithEvents MetroTextBox2 As ReaLTaiizor.Controls.MetroTextBox
     Friend WithEvents MoonLabel5 As ReaLTaiizor.Controls.MoonLabel
     Friend WithEvents MoonLabel7 As ReaLTaiizor.Controls.MoonLabel
     Friend WithEvents FoxButton3 As ReaLTaiizor.Controls.FoxButton
@@ -1086,4 +1086,8 @@ Partial Class dashboard
     Friend WithEvents FoxButton5 As ReaLTaiizor.Controls.FoxButton
     Friend WithEvents MoonLabel23 As ReaLTaiizor.Controls.MoonLabel
     Friend WithEvents MoonLabel22 As ReaLTaiizor.Controls.MoonLabel
+    Friend WithEvents ForeverTextBox1 As ReaLTaiizor.Controls.ForeverTextBox
+    Friend WithEvents ForeverTextBox2 As ReaLTaiizor.Controls.ForeverTextBox
+    Friend WithEvents FoxButton6 As ReaLTaiizor.Controls.FoxButton
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

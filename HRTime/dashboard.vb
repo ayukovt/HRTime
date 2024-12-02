@@ -1,4 +1,6 @@
-﻿Imports AutoUpdaterDotNET
+﻿Imports System.IO
+Imports AutoUpdaterDotNET
+Imports Microsoft.Win32
 
 Public Class dashboard
 
@@ -113,33 +115,33 @@ Public Class dashboard
         If My.Settings.AutoUpCheck = "True" Then
             ParrotCheckBox1.Checked = True
         End If
-        MetroTextBox1.Text = My.Settings.Username
-        MetroTextBox2.Text = My.Settings.AudioPath
+        ForeverTextBox1.Text = My.Settings.Username
+        ForeverTextBox2.Text = My.Settings.AudioPath
     End Sub
 
     Private Sub FoxButton1_Click(sender As Object, e As EventArgs) Handles FoxButton1.Click
-        If MetroTextBox1.Text = "" Then
+        If ForeverTextBox1.Text = "" Then
             Debug.WriteLine("textbox is empty msgbox")
             MessageBox.Show("Please enter something in the text box first.", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Username = ForeverTextBox1.Text
             My.Settings.Save()
-            Debug.WriteLine("name = " & MetroTextBox1.Text)
+            Debug.WriteLine("name = " & ForeverTextBox1.Text)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
-        If fourchanTerms.Any(Function(term) InStr(MetroTextBox1.Text, term, vbTextCompare) > 0) Then
+        If fourchanTerms.Any(Function(term) InStr(ForeverTextBox1.Text, term, vbTextCompare) > 0) Then
             Debug.WriteLine("4chan term msgbox")
             MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
-            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Username = ForeverTextBox1.Text
             My.Settings.Save()
-            Debug.WriteLine("name = " & MetroTextBox1.Text)
+            Debug.WriteLine("name = " & ForeverTextBox1.Text)
         End If
     End Sub
 
     Private Sub FoxButton2_Click(sender As Object, e As EventArgs) Handles FoxButton2.Click
-        My.Settings.AudioPath = MetroTextBox2.Text
+        My.Settings.AudioPath = ForeverTextBox2.Text
         My.Settings.Save()
     End Sub
 
@@ -196,4 +198,12 @@ Public Class dashboard
     "agp", "husstuss", "boyremove", "trannerexia", "luckshit",
     "malefail", "mog", "mogging", "mogs", "repper", "hsts"
     }
+
+    Private Sub FoxButton6_Click(sender As Object, e As EventArgs) Handles FoxButton6.Click
+        OpenFileDialog1.Filter = "wav files|*.wav"
+        OpenFileDialog1.Title = "Select the reminder audio file"
+        OpenFileDialog1.ShowDialog()
+        Debug.WriteLine("filedialog opened")
+        ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
+    End Sub
 End Class

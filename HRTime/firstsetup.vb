@@ -20,19 +20,19 @@ Public Class firstsetup
             SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0)
         End If
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub FoxButton1_Click(sender As Object, e As EventArgs) Handles FoxButton1.Click
         MaterialTabControl1.SelectedTab = TabPage2
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If MetroTextBox1.Text = "" Then
+    Private Sub FoxButton2_Click(sender As Object, e As EventArgs)
+        If ForeverTextBox1.Text = "" Then
             Debug.WriteLine("textbox is empty msgbox")
             MessageBox.Show("Please enter something in the text box first.", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Username = ForeverTextBox1.Text
             My.Settings.Save()
-            Debug.WriteLine("name = " & MetroTextBox1.Text)
+            Debug.WriteLine("name = " & ForeverTextBox1.Text)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
         Dim fourchanTerms As List(Of String) = New List(Of String) From {
@@ -46,18 +46,18 @@ Public Class firstsetup
             "agp", "husstuss", "boyremove", "trannerexia", "luckshit",
             "malefail", "mog", "mogging", "mogs", "repper", "hsts"
             }
-        If fourchanTerms.Any(Function(term) InStr(MetroTextBox1.Text, term, vbTextCompare) > 0) Then
+        If fourchanTerms.Any(Function(term) InStr(ForeverTextBox1.Text, term, vbTextCompare) > 0) Then
             Debug.WriteLine("4chan term msgbox")
             MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
-            My.Settings.Username = MetroTextBox1.Text
+            My.Settings.Username = ForeverTextBox1.Text
             My.Settings.Save()
-            Debug.WriteLine("name = " & MetroTextBox1.Text)
+            Debug.WriteLine("name = " & ForeverTextBox1.Text)
             MaterialTabControl1.SelectedTab = TabPage3
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub FoxButton3_Click(sender As Object, e As EventArgs)
         If DungeonNumeric1.Value = 0 Then
             Debug.WriteLine("invald amount msgbox")
             MessageBox.Show("Invalid amount.", "HRTime",
@@ -87,27 +87,26 @@ Public Class firstsetup
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub FoxButton4_Click(sender As Object, e As EventArgs)
         OpenFileDialog1.Filter = "wav files|*.wav"
         OpenFileDialog1.Title = "Select the reminder audio file"
         OpenFileDialog1.ShowDialog()
         Debug.WriteLine("filedialog opened")
-        DungeonRichTextBox1.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
+        ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
     End Sub
 
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub FoxButton5_Click(sender As Object, e As EventArgs)
         ' add a check for the right file extension and if the path is valid then proceed to tabpage5
-        My.Settings.AudioPath = DungeonRichTextBox1.Text
+        My.Settings.AudioPath = ForeverTextBox2.Text
         My.Settings.Save()
-        Debug.WriteLine("audiodir = " & DungeonRichTextBox1.Text)
+        Debug.WriteLine("audiodir = " & ForeverTextBox2.Text)
         MaterialTabControl1.SelectedTab = TabPage5
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        ' the buttons are bugged at least for me and the right color isnt applied idk ill try fixing it later
+    Private Sub FoxButton6_Click(sender As Object, e As EventArgs)
         My.Settings.AutoUpdate = "True"
         My.Settings.AutoUpCheck = "True"
         My.Settings.Save()
@@ -115,14 +114,14 @@ Public Class firstsetup
         MaterialTabControl1.SelectedTab = TabPage6
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub FoxButton7_Click(sender As Object, e As EventArgs)
         My.Settings.AutoUpdate = "False"
         My.Settings.Save()
         Debug.WriteLine("autoupdate = false")
         MaterialTabControl1.SelectedTab = TabPage6
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub FoxButton8_Click(sender As Object, e As EventArgs)
         My.Settings.FirstSetupNeeded = "false"
         My.Settings.Save()
         Debug.WriteLine("firstsetup complete")
