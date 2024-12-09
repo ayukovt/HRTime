@@ -1,4 +1,4 @@
-﻿Imports System.IO
+Imports System.IO
 Imports Microsoft.Win32
 
 Public Class firstsetup
@@ -80,7 +80,7 @@ Public Class firstsetup
                 My.Settings.INTERVAL_TYPE = "month"
                 My.Settings.INTERVAL_VALUE = DungeonNumeric1.Value
             Else
-                MessageBox.Show("Idk what the fuck happened lol")
+                MessageBox.Show("Idk what the fuck happened lol (an error has occoured, please tell exactly what you did and report it on GitHub issues so we can diagnose it)")
             End If
             My.Settings.Save()
             MaterialTabControl1.SelectedTab = TabPage4
@@ -90,20 +90,43 @@ Public Class firstsetup
     Private Sub FoxButton5_Click(sender As Object, e As EventArgs) Handles FoxButton5.Click
         OpenFileDialog1.Filter = "wav files|*.wav"
         OpenFileDialog1.Title = "Select the reminder audio file"
-        OpenFileDialog1.ShowDialog()
-        Debug.WriteLine("filedialog opened")
-        ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
+        ' We do DialogResult.OK to ensure it was confirmed by the user before saving so if for whatever reason the universe implodes upon itself and somehow the dialog box crashes (???) it won't save NULL and permanently crash HRTime
+        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            Debug.WriteLine("filedialog opened")
+            ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
+        End If
     End Sub
 
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
     End Sub
 
     Private Sub FoxButton4_Click(sender As Object, e As EventArgs) Handles FoxButton4.Click
-        ' add a check for the right file extension and if the path is valid then proceed to tabpage5
-        My.Settings.AudioPath = ForeverTextBox2.Text
-        My.Settings.Save()
-        Debug.WriteLine("audiodir = " & ForeverTextBox2.Text)
-        MaterialTabControl1.SelectedTab = TabPage5
+        ' I think with the check I added in FoxButton5, this is impossible to be NULL, but just in case...
+        If Not String.IsNullOrEmpty(ForeverTextBox2.Text) Then
+
+            ' The most important check: MAKE SURE IT IS A .WAV FILE.
+            ' technically this can be improved if a user is dumb and renames a .mp3 file to .wav and doesn't actually convert it but honestly that's on them...
+
+            If Path.GetExtension(ForeverTextBox2.Text).ToLower() = ".wav" Then
+
+                ' If a user, for some reason, selects a file that doesn't exist. This seems impossible and like a useless check but this actually can help us for cases when we don't have read permission for a file, so it deserves to be here.
+
+                If System.IO.File.Exists(ForeverTextBox2.Text) Then
+                    My.Settings.AudioPath = ForeverTextBox2.Text
+                    My.Settings.Save()
+                    Debug.WriteLine("audiodir = " & ForeverTextBox2.Text)
+                    MaterialTabControl1.SelectedTab = TabPage5
+                Else
+                    MessageBox.Show("The selected audio file does not exist. Please choose a valid file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Else
+                MessageBox.Show("Please select a valid .wav audio file.", "Invalid File Type", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Else
+            MessageBox.Show("Please select an audio file first.", "No File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+
+
     End Sub
 
     Private Sub FoxButton6_Click(sender As Object, e As EventArgs) Handles FoxButton6.Click
