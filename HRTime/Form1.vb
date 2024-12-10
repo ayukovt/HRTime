@@ -1,12 +1,33 @@
 ﻿Imports System.Configuration
+Imports System.Drawing.Text
+Imports System.Runtime.InteropServices
 Imports AutoUpdaterDotNET
 Imports Microsoft.Win32
+Imports ReaLTaiizor.Controls
 
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim fontName As String = "Poppins"
+        Dim fontSize As Single = 12.0F
+
+        Using fontTester As New Font(fontName, fontSize, FontStyle.Regular, GraphicsUnit.Pixel) ' before anyone says anything yes I could just bundle the font in the exe but mf I use like 4 different variants (which means 4 .ttf files) and there's like
+            If fontTester.Name = fontName Then                                                  ' 50 different fucking labels that use all of these variants interchangeably I can't just make a list of labels and set the font of everything in code to "Poppins"
+                Debug.WriteLine("poppins font detected. continuing.")                           ' bc thats just not gonna work (or im just stupid) idk ill figure it out at some point
+            Else
+                Dim fontmissingConfirmation As DialogResult = MessageBox.Show("Poppins has not been detected. HRTime requires Poppins to be installed on the system for displaying the UI correctly. Download font?", "HRTime",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                If fontmissingConfirmation = Windows.Forms.DialogResult.Yes Then
+                    dashboard.URLOpen("https://fonts.google.com/specimen/Poppins")
+                    Application.Exit()
+                End If
+            End If
+        End Using
         AutoUpdater.RunUpdateAsAdmin = False
         If My.Settings.AutoUpCheck = "True" Then
             AutoUpdater.Start("https://rbsoft.org/updates/AutoUpdaterTest.xml")
+            My.Settings.UpLastChecked = DateTime.Now
+            My.Settings.Save()
+            dashboard.MoonLabel25.Text = My.Settings.UpLastChecked
         End If
         If My.Settings.AutoUpdate = "True" Then
             AutoUpdater.Mandatory = True

@@ -108,6 +108,22 @@ Public Class dashboard
     End Sub
 
     Private Sub dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.UpLastChecked = "" Then
+            MoonLabel25.Text = "null"
+        Else
+            MoonLabel25.Text = My.Settings.UpLastChecked
+        End If
+        If My.Settings.FirstSetupNeeded = "true" Then
+            MaterialTabControl1.SelectedTab = TabPage7
+            ForeverButton1.Hide()
+            ForeverButton2.Hide()
+            ForeverButton3.Hide()
+            ForeverButton4.Hide()
+            ForeverButton5.Hide()
+            ForeverButton6.Hide()
+        Else
+            MaterialTabControl1.SelectedTab = TabPage1
+        End If
         If My.Settings.AutoUpdate = "True" Then
             ParrotCheckBox2.Checked = True
             ParrotCheckBox1.Checked = True
@@ -140,8 +156,22 @@ Public Class dashboard
     End Sub
 
     Private Sub FoxButton2_Click(sender As Object, e As EventArgs) Handles FoxButton2.Click
-        My.Settings.AudioPath = ForeverTextBox2.Text
-        My.Settings.Save()
+        If Not String.IsNullOrEmpty(ForeverTextBox2.Text) Then
+            If Path.GetExtension(ForeverTextBox2.Text).ToLower() = ".wav" Then
+                If System.IO.File.Exists(ForeverTextBox2.Text) Then
+                    My.Settings.AudioPath = ForeverTextBox2.Text
+                    My.Settings.Save()
+                    Debug.WriteLine("audiodir = " & ForeverTextBox2.Text)
+                    MaterialTabControl1.SelectedTab = TabPage5
+                Else
+                    MessageBox.Show("The selected audio file does not exist. Please choose a valid file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Else
+                MessageBox.Show("Invalid file type. Please select a valid .wav audio file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Else
+            MessageBox.Show("Please select an audio file first.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
     End Sub
 
     Private Sub FoxButton4_Click(sender As Object, e As EventArgs) Handles FoxButton4.Click
@@ -162,6 +192,9 @@ Public Class dashboard
 
     Private Sub FoxButton3_Click(sender As Object, e As EventArgs) Handles FoxButton3.Click
         AutoUpdater.Start("https://rbsoft.org/updates/AutoUpdaterTest.xml")
+        My.Settings.UpLastChecked = DateTime.Now
+        My.Settings.Save()
+        MoonLabel25.Text = My.Settings.UpLastChecked
     End Sub
 
     Private Sub ParrotCheckBox1_Click(sender As Object, e As EventArgs) Handles ParrotCheckBox1.Click
@@ -187,7 +220,7 @@ Public Class dashboard
     End Sub
 
     Dim fourchanTerms As List(Of String) = New List(Of String) From { ' copied from firstsetup bc apparently i cant just reference it in a different .vb file
-    "passoid", "hon", "gigahon", "ogrehon", "ogre", "boymoder",
+    "passoid", "gigahon", "ogrehon", "ogre", "boymoder",
     "manmoder", "tranny", "gorillamoder", "brickhon", "boomerhon",
     "bitterhon", "heighthon", "honmoder", "innerhon", "outerhon",
     "rapehon", "reddithon", "ribcagehon", "shadowhon", "shoulderhon",
@@ -201,8 +234,9 @@ Public Class dashboard
     Private Sub FoxButton6_Click(sender As Object, e As EventArgs) Handles FoxButton6.Click
         OpenFileDialog1.Filter = "wav files|*.wav"
         OpenFileDialog1.Title = "Select the reminder audio file"
-        OpenFileDialog1.ShowDialog()
-        Debug.WriteLine("filedialog opened")
-        ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
+        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            Debug.WriteLine("filedialog opened")
+            ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
+        End If
     End Sub
 End Class

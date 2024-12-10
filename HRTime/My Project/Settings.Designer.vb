@@ -148,6 +148,18 @@ Namespace My
                 Me("AutoUpCheck") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property UpLastChecked() As String
+            Get
+                Return CType(Me("UpLastChecked"),String)
+            End Get
+            Set
+                Me("UpLastChecked") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

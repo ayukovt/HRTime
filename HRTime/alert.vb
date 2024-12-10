@@ -6,7 +6,7 @@ Public Class alert
         If System.IO.File.Exists(My.Settings.AudioPath) Then
             My.Computer.Audio.Play(My.Settings.AudioPath)
         Else
-            MessageBox.Show("The specified audio file could not be found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("The specified audio file could not be found. Please update your audio path in settings.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
     Private Sub alert_Close(sender As Object, e As EventArgs) Handles MyBase.Closed

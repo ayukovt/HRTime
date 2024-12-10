@@ -90,6 +90,7 @@ Partial Class alert
         Controls.Add(MoonLabel1)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "alert"
         StartPosition = FormStartPosition.Manual
         Text = "alert"

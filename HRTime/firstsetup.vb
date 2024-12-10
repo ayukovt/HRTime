@@ -36,7 +36,7 @@ Public Class firstsetup
             MaterialTabControl1.SelectedTab = TabPage3
         End If
         Dim fourchanTerms As List(Of String) = New List(Of String) From {
-            "passoid", "hon", "gigahon", "ogrehon", "ogre", "boymoder",
+            "passoid", "gigahon", "ogrehon", "ogre", "boymoder",
             "manmoder", "tranny", "gorillamoder", "brickhon", "boomerhon",
             "bitterhon", "heighthon", "honmoder", "innerhon", "outerhon",
             "rapehon", "reddithon", "ribcagehon", "shadowhon", "shoulderhon",
@@ -80,7 +80,7 @@ Public Class firstsetup
                 My.Settings.INTERVAL_TYPE = "month"
                 My.Settings.INTERVAL_VALUE = DungeonNumeric1.Value
             Else
-                MessageBox.Show("Idk what the fuck happened lol (an error has occoured, please tell exactly what you did and report it on GitHub issues so we can diagnose it)")
+                MessageBox.Show("An unknown error has occured, please tell exactly what you did and report it on GitHub issues so we can diagnose it.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
             My.Settings.Save()
             MaterialTabControl1.SelectedTab = TabPage4
@@ -117,13 +117,13 @@ Public Class firstsetup
                     Debug.WriteLine("audiodir = " & ForeverTextBox2.Text)
                     MaterialTabControl1.SelectedTab = TabPage5
                 Else
-                    MessageBox.Show("The selected audio file does not exist. Please choose a valid file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("The selected audio file does not exist. Please choose a valid file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
-                MessageBox.Show("Please select a valid .wav audio file.", "Invalid File Type", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid file type. Please select a valid .wav audio file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
-            MessageBox.Show("Please select an audio file first.", "No File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please select an audio file first.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
 
@@ -145,10 +145,12 @@ Public Class firstsetup
     End Sub
 
     Private Sub FoxButton8_Click(sender As Object, e As EventArgs) Handles FoxButton8.Click
+        MessageBox.Show("HRTime is currently in very early alpha stage. If any issues occur, report it to the devs on github.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Information)
         My.Settings.FirstSetupNeeded = "false"
         My.Settings.Save()
         Debug.WriteLine("firstsetup complete")
         Me.Close()
+        Application.Restart() ' workaround for the Form1 bug until we either switch to task scheduling or figure out the issue
     End Sub
 
     Private Sub ForeverButton8_Click(sender As Object, e As EventArgs) Handles ForeverButton8.Click

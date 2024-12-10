@@ -602,6 +602,7 @@ Partial Class firstsetup
         Controls.Add(ForeverButton7)
         Controls.Add(MaterialTabControl1)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "firstsetup"
         StartPosition = FormStartPosition.CenterScreen
         Text = "firstsetup"

@@ -87,7 +87,11 @@ Partial Class dashboard
         PictureBox4 = New PictureBox()
         MoonLabel12 = New ReaLTaiizor.Controls.MoonLabel()
         MoonLabel11 = New ReaLTaiizor.Controls.MoonLabel()
+        TabPage7 = New TabPage()
+        MoonLabel24 = New ReaLTaiizor.Controls.MoonLabel()
+        PictureBox8 = New PictureBox()
         OpenFileDialog1 = New OpenFileDialog()
+        MoonLabel25 = New ReaLTaiizor.Controls.MoonLabel()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +108,8 @@ Partial Class dashboard
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        TabPage7.SuspendLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -275,6 +281,7 @@ Partial Class dashboard
         MaterialTabControl1.Controls.Add(TabPage4)
         MaterialTabControl1.Controls.Add(TabPage5)
         MaterialTabControl1.Controls.Add(TabPage6)
+        MaterialTabControl1.Controls.Add(TabPage7)
         MaterialTabControl1.Depth = 0
         MaterialTabControl1.Location = New Point(66, 61)
         MaterialTabControl1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER
@@ -462,6 +469,7 @@ Partial Class dashboard
         ' TabPage4
         ' 
         TabPage4.BackColor = Color.FromArgb(CByte(22), CByte(19), CByte(29))
+        TabPage4.Controls.Add(MoonLabel25)
         TabPage4.Controls.Add(ParrotCheckBox2)
         TabPage4.Controls.Add(ParrotCheckBox1)
         TabPage4.Controls.Add(MoonLabel7)
@@ -978,9 +986,54 @@ Partial Class dashboard
         MoonLabel11.TabIndex = 0
         MoonLabel11.Text = "HRTime 0.1a"
         ' 
+        ' TabPage7
+        ' 
+        TabPage7.BackColor = Color.FromArgb(CByte(22), CByte(19), CByte(29))
+        TabPage7.Controls.Add(MoonLabel24)
+        TabPage7.Controls.Add(PictureBox8)
+        TabPage7.Location = New Point(4, 24)
+        TabPage7.Name = "TabPage7"
+        TabPage7.Padding = New Padding(3)
+        TabPage7.Size = New Size(636, 329)
+        TabPage7.TabIndex = 6
+        TabPage7.Text = "TabPage7"
+        ' 
+        ' MoonLabel24
+        ' 
+        MoonLabel24.AutoSize = True
+        MoonLabel24.BackColor = Color.Transparent
+        MoonLabel24.Font = New Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        MoonLabel24.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        MoonLabel24.Location = New Point(199, 185)
+        MoonLabel24.Name = "MoonLabel24"
+        MoonLabel24.Size = New Size(243, 28)
+        MoonLabel24.TabIndex = 2
+        MoonLabel24.Text = "First setup isn't complete yet!"
+        ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
+        PictureBox8.Location = New Point(244, 48)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(150, 150)
+        PictureBox8.TabIndex = 1
+        PictureBox8.TabStop = False
+        ' 
         ' OpenFileDialog1
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
+        ' MoonLabel25
+        ' 
+        MoonLabel25.AutoSize = True
+        MoonLabel25.BackColor = Color.Transparent
+        MoonLabel25.Font = New Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        MoonLabel25.ForeColor = Color.FromArgb(CByte(98), CByte(84), CByte(129))
+        MoonLabel25.Location = New Point(89, 24)
+        MoonLabel25.Name = "MoonLabel25"
+        MoonLabel25.Size = New Size(32, 22)
+        MoonLabel25.TabIndex = 10
+        MoonLabel25.Text = "null"
         ' 
         ' dashboard
         ' 
@@ -996,6 +1049,7 @@ Partial Class dashboard
         Controls.Add(MoonLabel1)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "dashboard"
         StartPosition = FormStartPosition.CenterScreen
@@ -1022,6 +1076,9 @@ Partial Class dashboard
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        TabPage7.ResumeLayout(False)
+        TabPage7.PerformLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1090,4 +1147,8 @@ Partial Class dashboard
     Friend WithEvents ForeverTextBox2 As ReaLTaiizor.Controls.ForeverTextBox
     Friend WithEvents FoxButton6 As ReaLTaiizor.Controls.FoxButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents TabPage7 As TabPage
+    Friend WithEvents MoonLabel24 As ReaLTaiizor.Controls.MoonLabel
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents MoonLabel25 As ReaLTaiizor.Controls.MoonLabel
 End Class
