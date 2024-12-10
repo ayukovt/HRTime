@@ -12,6 +12,10 @@ HRTime is a simple reminder application written in VB.NET with a user-friendly i
 
 ~~dw ill rewrite it at some point to not use an obsolete language pls dont burn my house down,,,,~~
 
+If you want to support development of HRTime, consider making a donation by clicking the button below :)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X54LSTQ)
+
 ### Features
 
 ------------
@@ -44,6 +48,6 @@ As of now, there is no official Linux release so just use Wine (untested), howev
 ------------
 
 
-- Open the .exe file
+- Open the .exe file | **NOTE:** at the moment, the .exe has to be running in the background to maintain its functionality
 - Follow first setup steps (if not done already)
 - Click on the system tray icon to access settings
