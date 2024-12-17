@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.CompilerServices;
+using NAudio;
+using NAudio.Wave;
 
 namespace HRTime
 {
 
     public partial class alert
     {
+        IWavePlayer waveOutDevice = new WaveOut();
+        AudioFileReader audioFileReader = new AudioFileReader(My.MySettingsProperty.Settings.AudioPath);
         public alert()
         {
             InitializeComponent();
@@ -18,7 +22,9 @@ namespace HRTime
             SetBounds(Screen.GetWorkingArea(this).Width - Width, Screen.GetWorkingArea(this).Height - Height, Width, Height);
             if (System.IO.File.Exists(My.MySettingsProperty.Settings.AudioPath))
             {
-                My.MyProject.Computer.Audio.Play(My.MySettingsProperty.Settings.AudioPath);
+
+                waveOutDevice.Init(audioFileReader);
+                waveOutDevice.Play();
             }
             else
             {
@@ -27,7 +33,9 @@ namespace HRTime
         }
         private void alert_Close(object sender, EventArgs e)
         {
-            My.MyProject.Computer.Audio.Stop();
+            waveOutDevice.Stop();
+            audioFileReader.Dispose();
+            waveOutDevice.Dispose();
         }
 
         private void FoxButton2_Click(object sender, EventArgs e)
@@ -55,6 +63,7 @@ namespace HRTime
             }
             My.MyProject.Forms.Form1.NotifyIcon1.BalloonTipText = "Your next HRT reminder will run on: " + My.MySettingsProperty.Settings.NextDoseDate;
             My.MyProject.Forms.Form1.NotifyIcon1.ShowBalloonTip(500);
+            IWavePlayer waveOutDevice = new WaveOut();
             Close();
         }
 
