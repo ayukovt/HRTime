@@ -10,8 +10,6 @@ HRTime - Your simple HRT companion
 =============
 HRTime is a simple reminder application written in VB.NET with a user-friendly interface created in WinForms. Designed to support individuals managing hormone therapy, HRTime ensures you never miss a dose by triggering timely alerts based on your scheduled medication times.
 
-~~dw ill rewrite it at some point to not use an obsolete language pls dont burn my house down,,,,~~
-
 If you want to support development of HRTime, consider making a donation by clicking the button below :)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X54LSTQ)
