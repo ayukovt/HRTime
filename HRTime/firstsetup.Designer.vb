@@ -605,7 +605,7 @@ Partial Class firstsetup
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "firstsetup"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "firstsetup"
+        Text = "HRTime First Setup"
         MaterialTabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()

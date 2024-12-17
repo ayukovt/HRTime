@@ -55,10 +55,11 @@ Namespace My
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property NextDoseDate() As Date
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property NextDoseDate() As String
             Get
-                Return CType(Me("NextDoseDate"),Date)
+                Return CType(Me("NextDoseDate"),String)
             End Get
             Set
                 Me("NextDoseDate") = value

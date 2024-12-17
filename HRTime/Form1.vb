@@ -7,6 +7,17 @@ Imports ReaLTaiizor.Controls
 
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For Each argument As String In My.Application.CommandLineArgs
+            If argument = "-debug" Then
+                dashboard.Text = "[DEBUG] HRTime Settings"
+                firstsetup.Text = "[DEBUG] HRTime First Setup"
+            End If
+
+            If argument = "-alert" Then
+                ' will be useful once we start using task scheduling
+                alert.Show()
+            End If
+        Next
         Dim fontName As String = "Poppins"
         Dim fontSize As Single = 12.0F
 
@@ -65,8 +76,8 @@ Public Class Form1
         ' HOWEVER when you restart the exe and manually go into the user.config file and change the NextDoseDate string value (didn't test yet restarting the exe and then just changing the system time), suddenly the alert gets triggered just fine
 
         Dim now As DateTime = DateTime.Now
-        dashboard.MoonLabel23.Text = now.ToString("MM/dd/yyyy HH:mm:ss")
-        Label1.Text = now.ToString("MM/dd/yyyy HH:mm:ss")
+        dashboard.MoonLabel23.Text = now
+        Label1.Text = now
         If (My.Settings.NextDoseDate = Label1.Text) Then ' apparently vbnet cant read now.ToString directly (prob bc theres no string to output it to or smth idfk I suck at this)
             alert.Show()                                 ' so for now, we have this janky ass workaround with a label until we figure out how task scheduling works
         End If                                           ' puppy needs her wife to cuddle after releasing this monstrosity,,,, waaaaaaaa
