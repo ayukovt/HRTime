@@ -70,7 +70,6 @@ namespace HRTime
                 AutoUpdater.UpdateMode = Mode.ForcedDownload;
                 AutoUpdater.Start("https://rbsoft.org/updates/AutoUpdaterTest.xml");
             }
-            NotifyIcon1.Visible = true;
             WindowState = FormWindowState.Minimized;
             Opacity = 0d;
             if (My.MySettingsProperty.Settings.FirstSetupNeeded == "false")
@@ -88,12 +87,12 @@ namespace HRTime
             }
             Timer1.Enabled = true;
             Timer1.Start();
+            Close();
         }
 
         private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             My.MyProject.Forms.dashboard.Show();
-            NotifyIcon1.Visible = false;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -109,7 +108,7 @@ namespace HRTime
             if ((My.MySettingsProperty.Settings.NextDoseDate ?? "") == (Label1.Text ?? "")) // apparently vbnet (now C# so check back at this and rewrite later) cant read now.ToString directly (prob bc theres no string to output it to or smth idfk I suck at this)
             {                                                                               // so for now, we have this janky ass workaround with a label until we figure out how task scheduling works
                 My.MyProject.Forms.alert.Show();                                            // puppy needs her wife to cuddle after releasing this monstrosity,,,, waaaaaaaa
-            }                                                                    
+            }
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)

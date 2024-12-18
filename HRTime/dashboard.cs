@@ -38,9 +38,8 @@ namespace HRTime
         }
         private void dashboard_Close(object sender, EventArgs e)
         {
-            My.MyProject.Forms.Form1.NotifyIcon1.Visible = true;
-            My.MyProject.Forms.Form1.NotifyIcon1.BalloonTipText = "Minimized to system tray.";
-            My.MyProject.Forms.Form1.NotifyIcon1.ShowBalloonTip(500);
+            TrayApplicationContext.manager.TrayIcon.BalloonTipText = "Minimized to system tray.";
+            trybarManager.TrayIcon.ShowBalloonTip(500);
         }
         private void ForeverButton1_Click(object sender, EventArgs e)
         {

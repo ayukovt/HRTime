@@ -11,6 +11,7 @@ namespace HRTime
 
     public partial class alert
     {
+        TrayApplicationManager trybarManager = new TrayApplicationManager();
         IWavePlayer waveOutDevice = new WaveOut();
         AudioFileReader audioFileReader = new AudioFileReader(My.MySettingsProperty.Settings.AudioPath);
         public alert()
@@ -61,8 +62,8 @@ namespace HRTime
             {
                 MessageBox.Show("Good job, " + My.MySettingsProperty.Settings.Username + "! Keep it up <3", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            My.MyProject.Forms.Form1.NotifyIcon1.BalloonTipText = "Your next HRT reminder will run on: " + My.MySettingsProperty.Settings.NextDoseDate;
-            My.MyProject.Forms.Form1.NotifyIcon1.ShowBalloonTip(500);
+            trybarManager.TrayIcon.BalloonTipText = "Your next HRT reminder will run on: " + My.MySettingsProperty.Settings.NextDoseDate;
+            trybarManager.TrayIcon.ShowBalloonTip(500);
             IWavePlayer waveOutDevice = new WaveOut();
             Close();
         }
