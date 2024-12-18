@@ -1,22 +1,22 @@
-﻿using System.Windows.Forms;
-
 namespace HRTime
 {
-	public class TrayApplicationContext : ApplicationContext
-	{
+    public class TrayApplicationContext : ApplicationContext
+    {
+        public TrayApplicationContext()
+        {
+            // Use the Singleton instance to manage the tray icon
+            TrayApplicationManager manager = TrayApplicationManager.Instance;
+        }
 
-		public TrayApplicationManager manager = new TrayApplicationManager();
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // Dispose of TrayApplicationManager
+                TrayApplicationManager.Instance.Dispose();
+            }
 
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing)
-			{
-				this.manager.Dispose();
-			}
-
-			base.Dispose(disposing);
-		}
-
-	}
-
-} //end of root namespace
+            base.Dispose(disposing);
+        }
+    }
+}

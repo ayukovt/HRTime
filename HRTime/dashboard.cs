@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -38,7 +38,12 @@ namespace HRTime
         }
         private void dashboard_Close(object sender, EventArgs e)
         {
-            TrayApplicationContext.manager.TrayIcon.BalloonTipText = "Minimized to system tray.";
+            // Minimize the form to the tray
+            this.Hide(); // This hides the form without closing it
+    
+            // Show balloon tip (optional)
+            TrayApplicationManager trybarManager = TrayApplicationManager.Instance;  // Use existing instance
+            trybarManager.TrayIcon.BalloonTipText = "Minimized to system tray.";
             trybarManager.TrayIcon.ShowBalloonTip(500);
         }
         private void ForeverButton1_Click(object sender, EventArgs e)
