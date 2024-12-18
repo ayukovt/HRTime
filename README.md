@@ -46,6 +46,9 @@ As of now, there is no official Linux release so just use Wine (untested), howev
 ------------
 
 
-- Open the .exe file | **NOTE:** at the moment, the .exe has to be running in the background to maintain its functionality
+- Open the .exe file
 - Follow first setup steps (if not done already)
 - Click on the system tray icon to access settings
+> [!IMPORTANT] 
+> At the moment, the .exe has to be running in the background to maintain its functionality.\
+> This is planned to be changed in the future
