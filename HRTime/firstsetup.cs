@@ -44,14 +44,12 @@ namespace HRTime
         {
             if (string.IsNullOrEmpty(ForeverTextBox1.Text))
             {
-                Debug.WriteLine("textbox is empty msgbox");
                 MessageBox.Show("Please enter something in the text box first.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 My.MySettingsProperty.Settings.Username = ForeverTextBox1.Text;
                 My.MySettingsProperty.Settings.Save();
-                Debug.WriteLine("name = " + ForeverTextBox1.Text);
                 MaterialTabControl1.SelectedTab = TabPage3;
             }
             var fourchanTerms = new List<string>() { 
@@ -76,7 +74,6 @@ namespace HRTime
                 MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 My.MySettingsProperty.Settings.Username = ForeverTextBox1.Text;
                 My.MySettingsProperty.Settings.Save();
-                Debug.WriteLine("name = " + ForeverTextBox1.Text);
                 MaterialTabControl1.SelectedTab = TabPage3;
             }
         }
@@ -85,7 +82,6 @@ namespace HRTime
         {
             if (DungeonNumeric1.Value == 0L)
             {
-                Debug.WriteLine("invald amount msgbox");
                 MessageBox.Show("Invalid amount.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -122,12 +118,11 @@ namespace HRTime
 
         private void FoxButton5_Click(object sender, EventArgs e)
         {
-            OpenFileDialog1.Filter = "wav files|*.wav";
+            OpenFileDialog1.Filter = "Audio files|*.mp3;*.wav;*.aac;*.wma";
             OpenFileDialog1.Title = "Select the reminder audio file";
             // We do DialogResult.OK to ensure it was confirmed by the user before saving so if for whatever reason the universe implodes upon itself and somehow the dialog box crashes (???) it won't save NULL and permanently crash HRTime
             if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Debug.WriteLine("filedialog opened");
                 ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) + @"\" + Path.GetFileName(OpenFileDialog1.FileName);
             }
         }
@@ -144,8 +139,9 @@ namespace HRTime
 
                 // The most important check: MAKE SURE IT IS A .WAV FILE.
                 // technically this can be improved if a user is dumb and renames a .mp3 file to .wav and doesn't actually convert it but honestly that's on them...
+                var extnCheck = Path.GetExtension(ForeverTextBox2.Text).ToLower();
 
-                if (Path.GetExtension(ForeverTextBox2.Text).ToLower() == ".wav")
+                if (extnCheck == ".wav" || extnCheck == ".mp3" || extnCheck == ".aac" || extnCheck == ".wma")
                 {
 
                     // If a user, for some reason, selects a file that doesn't exist. This seems impossible and like a useless check but this actually can help us for cases when we don't have read permission for a file, so it deserves to be here.
@@ -164,7 +160,7 @@ namespace HRTime
                 }
                 else
                 {
-                    MessageBox.Show("Invalid file type. Please select a valid .wav audio file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid file type. Please select a valid audio file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -180,7 +176,6 @@ namespace HRTime
             My.MySettingsProperty.Settings.AutoUpdate = "True";
             My.MySettingsProperty.Settings.AutoUpCheck = "True";
             My.MySettingsProperty.Settings.Save();
-            Debug.WriteLine("autoupdate = true");
             MaterialTabControl1.SelectedTab = TabPage6;
         }
 
@@ -188,7 +183,6 @@ namespace HRTime
         {
             My.MySettingsProperty.Settings.AutoUpdate = "False";
             My.MySettingsProperty.Settings.Save();
-            Debug.WriteLine("autoupdate = false");
             MaterialTabControl1.SelectedTab = TabPage6;
         }
 
@@ -197,9 +191,8 @@ namespace HRTime
             MessageBox.Show("HRTime is currently in very early alpha stage. If any issues occur, report it to the devs on github.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Information);
             My.MySettingsProperty.Settings.FirstSetupNeeded = "false";
             My.MySettingsProperty.Settings.Save();
-            Debug.WriteLine("firstsetup complete");
             Close();
-            Application.Restart(); // workaround for the Form1 bug until we either switch to task scheduling or figure out the issue
+            Application.Restart(); // workaround for the Form1 (now moved to TrayApplicationManager, idk if the bug still exists) bug until we either switch to task scheduling or figure out the issue
         }
 
         private void ForeverButton8_Click(object sender, EventArgs e)

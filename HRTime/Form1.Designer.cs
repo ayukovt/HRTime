@@ -35,17 +35,11 @@ namespace HRTime
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Timer1 = new Timer(components);
             PictureBox1 = new PictureBox();
             Label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // Timer1
-            // 
-            Timer1.Tick += Timer1_Tick;
             // 
             // PictureBox1
             // 
@@ -53,36 +47,35 @@ namespace HRTime
             PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             PictureBox1.Location = new Point(-1, 1);
             PictureBox1.Name = "PictureBox1";
-            PictureBox1.Size = new Size(557, 226);
+            PictureBox1.Size = new Size(629, 226);
             PictureBox1.TabIndex = 1;
             PictureBox1.TabStop = false;
             // 
             // Label1
             // 
             Label1.AutoSize = true;
-            Label1.Location = new Point(202, 26);
+            Label1.Location = new Point(12, 18);
             Label1.Name = "Label1";
-            Label1.Size = new Size(41, 15);
+            Label1.Size = new Size(570, 15);
             Label1.TabIndex = 2;
-            Label1.Text = "Label1";
+            Label1.Text = "if you see this, i fucked smth up bc this shouldnt run in bg it literally shoud run checks on startup and close\r\n";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(552, 225);
+            ClientSize = new Size(625, 225);
             Controls.Add(Label1);
             Controls.Add(PictureBox1);
             Name = "Form1";
             ShowInTaskbar = false;
-            Text = "handler (important thing dont close it pls)";
+            Text = "handler";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        internal Timer Timer1;
         internal PictureBox PictureBox1;
         internal Label Label1;
     }

@@ -35,65 +35,68 @@ namespace HRTime
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             Panel1 = new Panel();
             ForeverButton6 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton6.Click += new EventHandler(ForeverButton6_Click);
             ForeverButton5 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton5.Click += new EventHandler(ForeverButton5_Click);
             ForeverButton4 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton4.Click += new EventHandler(ForeverButton4_Click);
             ForeverButton3 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton3.Click += new EventHandler(ForeverButton3_Click);
             ForeverButton2 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton2.Click += new EventHandler(ForeverButton2_Click);
             ForeverButton1 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton1.Click += new EventHandler(ForeverButton1_Click);
             Panel2 = new Panel();
             PictureBox1 = new PictureBox();
             MoonLabel1 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel2 = new ReaLTaiizor.Controls.MoonLabel();
             ForeverButton7 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton7.Click += new EventHandler(ForeverButton7_Click);
             ForeverButton8 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton8.Click += new EventHandler(ForeverButton8_Click);
             MaterialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             TabPage1 = new TabPage();
             ForeverTextBox1 = new ReaLTaiizor.Controls.ForeverTextBox();
             FoxButton1 = new ReaLTaiizor.Controls.FoxButton();
-            FoxButton1.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxButton1_Click);
             MoonLabel3 = new ReaLTaiizor.Controls.MoonLabel();
             TabPage2 = new TabPage();
             PictureBox2 = new PictureBox();
             MoonLabel4 = new ReaLTaiizor.Controls.MoonLabel();
             TabPage3 = new TabPage();
             FoxButton6 = new ReaLTaiizor.Controls.FoxButton();
-            FoxButton6.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxButton6_Click);
             ForeverTextBox2 = new ReaLTaiizor.Controls.ForeverTextBox();
             FoxButton2 = new ReaLTaiizor.Controls.FoxButton();
-            FoxButton2.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxButton2_Click);
             MoonLabel5 = new ReaLTaiizor.Controls.MoonLabel();
             TabPage4 = new TabPage();
+            MoonLabel25 = new ReaLTaiizor.Controls.MoonLabel();
             ParrotCheckBox2 = new ReaLTaiizor.Controls.ParrotCheckBox();
-            ParrotCheckBox2.Click += new EventHandler(ParrotCheckBox2_Click);
             ParrotCheckBox1 = new ReaLTaiizor.Controls.ParrotCheckBox();
-            ParrotCheckBox1.Click += new EventHandler(ParrotCheckBox1_Click);
             MoonLabel7 = new ReaLTaiizor.Controls.MoonLabel();
             FoxButton3 = new ReaLTaiizor.Controls.FoxButton();
-            FoxButton3.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxButton3_Click);
             MoonLabel6 = new ReaLTaiizor.Controls.MoonLabel();
             TabPage5 = new TabPage();
             FoxButton4 = new ReaLTaiizor.Controls.FoxButton();
-            FoxButton4.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxButton4_Click);
             MoonLabel10 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel9 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel8 = new ReaLTaiizor.Controls.MoonLabel();
             PictureBox3 = new PictureBox();
             TabPage6 = new TabPage();
+            foxButton8 = new ReaLTaiizor.Controls.FoxButton();
+            moonLabel41 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel40 = new ReaLTaiizor.Controls.MoonLabel();
+            foxButton7 = new ReaLTaiizor.Controls.FoxButton();
+            moonLabel39 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel38 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel37 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel36 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel35 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel34 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel33 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel32 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel31 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel30 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel29 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel28 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel27 = new ReaLTaiizor.Controls.MoonLabel();
+            moonLabel26 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel23 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel22 = new ReaLTaiizor.Controls.MoonLabel();
             FoxButton5 = new ReaLTaiizor.Controls.FoxButton();
-            FoxButton5.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxButton5_Click);
             MoonLabel21 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel20 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel19 = new ReaLTaiizor.Controls.MoonLabel();
@@ -101,20 +104,13 @@ namespace HRTime
             PictureBox6 = new PictureBox();
             PictureBox5 = new PictureBox();
             NightLinkLabel1 = new ReaLTaiizor.Controls.NightLinkLabel();
-            NightLinkLabel1.LinkClicked += new LinkLabelLinkClickedEventHandler(NightLinkLabel1_LinkClicked);
             MoonLabel18 = new ReaLTaiizor.Controls.MoonLabel();
             ForeverButton12 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton12.Click += new EventHandler(ForeverButton12_Click);
             ForeverButton11 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton11.Click += new EventHandler(ForeverButton11_Click);
             ForeverButton10 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton10.Click += new EventHandler(ForeverButton10_Click);
             ForeverButton9 = new ReaLTaiizor.Controls.ForeverButton();
-            ForeverButton9.Click += new EventHandler(ForeverButton9_Click);
             FoxLinkLabel2 = new ReaLTaiizor.Controls.FoxLinkLabel();
-            FoxLinkLabel2.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxLinkLabel2_Click);
             FoxLinkLabel1 = new ReaLTaiizor.Controls.FoxLinkLabel();
-            FoxLinkLabel1.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(FoxLinkLabel1_Click);
             MoonLabel17 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel16 = new ReaLTaiizor.Controls.MoonLabel();
             MoonLabel15 = new ReaLTaiizor.Controls.MoonLabel();
@@ -127,7 +123,6 @@ namespace HRTime
             MoonLabel24 = new ReaLTaiizor.Controls.MoonLabel();
             PictureBox8 = new PictureBox();
             OpenFileDialog1 = new OpenFileDialog();
-            MoonLabel25 = new ReaLTaiizor.Controls.MoonLabel();
             Panel1.SuspendLayout();
             Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
@@ -168,78 +163,84 @@ namespace HRTime
             ForeverButton6.BackColor = Color.Transparent;
             ForeverButton6.BackgroundImage = (Image)resources.GetObject("ForeverButton6.BackgroundImage");
             ForeverButton6.BaseColor = Color.Transparent;
-            ForeverButton6.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton6.Location = new Point(0, 358);
             ForeverButton6.Name = "ForeverButton6";
             ForeverButton6.Rounded = false;
             ForeverButton6.Size = new Size(60, 48);
             ForeverButton6.TabIndex = 6;
             ForeverButton6.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton6.Click += ForeverButton6_Click;
             // 
             // ForeverButton5
             // 
             ForeverButton5.BackColor = Color.Transparent;
             ForeverButton5.BackgroundImage = (Image)resources.GetObject("ForeverButton5.BackgroundImage");
             ForeverButton5.BaseColor = Color.Transparent;
-            ForeverButton5.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton5.Location = new Point(0, 253);
             ForeverButton5.Name = "ForeverButton5";
             ForeverButton5.Rounded = false;
             ForeverButton5.Size = new Size(60, 45);
             ForeverButton5.TabIndex = 5;
             ForeverButton5.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton5.Click += ForeverButton5_Click;
             // 
             // ForeverButton4
             // 
             ForeverButton4.BackColor = Color.Transparent;
             ForeverButton4.BackgroundImage = (Image)resources.GetObject("ForeverButton4.BackgroundImage");
             ForeverButton4.BaseColor = Color.Transparent;
-            ForeverButton4.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton4.Location = new Point(0, 205);
             ForeverButton4.Name = "ForeverButton4";
             ForeverButton4.Rounded = false;
             ForeverButton4.Size = new Size(60, 45);
             ForeverButton4.TabIndex = 4;
             ForeverButton4.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton4.Click += ForeverButton4_Click;
             // 
             // ForeverButton3
             // 
             ForeverButton3.BackColor = Color.Transparent;
             ForeverButton3.BackgroundImage = (Image)resources.GetObject("ForeverButton3.BackgroundImage");
             ForeverButton3.BaseColor = Color.Transparent;
-            ForeverButton3.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton3.Location = new Point(0, 157);
             ForeverButton3.Name = "ForeverButton3";
             ForeverButton3.Rounded = false;
             ForeverButton3.Size = new Size(60, 45);
             ForeverButton3.TabIndex = 3;
             ForeverButton3.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton3.Click += ForeverButton3_Click;
             // 
             // ForeverButton2
             // 
             ForeverButton2.BackColor = Color.Transparent;
             ForeverButton2.BackgroundImage = (Image)resources.GetObject("ForeverButton2.BackgroundImage");
             ForeverButton2.BaseColor = Color.Transparent;
-            ForeverButton2.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton2.Location = new Point(0, 109);
             ForeverButton2.Name = "ForeverButton2";
             ForeverButton2.Rounded = false;
             ForeverButton2.Size = new Size(60, 45);
             ForeverButton2.TabIndex = 2;
             ForeverButton2.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton2.Click += ForeverButton2_Click;
             // 
             // ForeverButton1
             // 
             ForeverButton1.BackColor = Color.Transparent;
             ForeverButton1.BackgroundImage = (Image)resources.GetObject("ForeverButton1.BackgroundImage");
             ForeverButton1.BaseColor = Color.Transparent;
-            ForeverButton1.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton1.Location = new Point(0, 61);
             ForeverButton1.Name = "ForeverButton1";
             ForeverButton1.Rounded = false;
             ForeverButton1.Size = new Size(60, 45);
             ForeverButton1.TabIndex = 1;
             ForeverButton1.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton1.Click += ForeverButton1_Click;
             // 
             // Panel2
             // 
@@ -263,7 +264,7 @@ namespace HRTime
             // 
             MoonLabel1.AutoSize = true;
             MoonLabel1.BackColor = Color.Transparent;
-            MoonLabel1.Font = new Font("Poppins Medium", 21.75f, FontStyle.Bold, GraphicsUnit.Point);
+            MoonLabel1.Font = new Font("Poppins Medium", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             MoonLabel1.ForeColor = Color.FromArgb(199, 175, 255);
             MoonLabel1.Location = new Point(66, 6);
             MoonLabel1.Name = "MoonLabel1";
@@ -275,7 +276,7 @@ namespace HRTime
             // 
             MoonLabel2.AutoSize = true;
             MoonLabel2.BackColor = Color.Transparent;
-            MoonLabel2.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel2.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel2.Location = new Point(73, 43);
             MoonLabel2.Name = "MoonLabel2";
@@ -288,26 +289,28 @@ namespace HRTime
             ForeverButton7.BackColor = Color.Transparent;
             ForeverButton7.BackgroundImage = (Image)resources.GetObject("ForeverButton7.BackgroundImage");
             ForeverButton7.BaseColor = Color.Transparent;
-            ForeverButton7.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton7.Location = new Point(651, 0);
             ForeverButton7.Name = "ForeverButton7";
             ForeverButton7.Rounded = false;
             ForeverButton7.Size = new Size(60, 60);
             ForeverButton7.TabIndex = 7;
             ForeverButton7.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton7.Click += ForeverButton7_Click;
             // 
             // ForeverButton8
             // 
             ForeverButton8.BackColor = Color.Transparent;
             ForeverButton8.BackgroundImage = (Image)resources.GetObject("ForeverButton8.BackgroundImage");
             ForeverButton8.BaseColor = Color.Transparent;
-            ForeverButton8.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton8.Location = new Point(588, 0);
             ForeverButton8.Name = "ForeverButton8";
             ForeverButton8.Rounded = false;
             ForeverButton8.Size = new Size(60, 60);
             ForeverButton8.TabIndex = 8;
             ForeverButton8.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton8.Click += ForeverButton8_Click;
             // 
             // MaterialTabControl1
             // 
@@ -367,7 +370,7 @@ namespace HRTime
             FoxButton1.DisabledTextColor = Color.FromArgb(98, 84, 129);
             FoxButton1.DownColor = Color.FromArgb(52, 42, 69);
             FoxButton1.EnabledCalc = true;
-            FoxButton1.Font = new Font("Poppins", 9.75f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxButton1.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FoxButton1.ForeColor = Color.FromArgb(98, 84, 129);
             FoxButton1.Location = new Point(11, 65);
             FoxButton1.Name = "FoxButton1";
@@ -375,12 +378,13 @@ namespace HRTime
             FoxButton1.Size = new Size(92, 24);
             FoxButton1.TabIndex = 2;
             FoxButton1.Text = "Change";
+            FoxButton1.Click += FoxButton1_Click;
             // 
             // MoonLabel3
             // 
             MoonLabel3.AutoSize = true;
             MoonLabel3.BackColor = Color.Transparent;
-            MoonLabel3.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel3.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel3.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel3.Location = new Point(7, 6);
             MoonLabel3.Name = "MoonLabel3";
@@ -413,7 +417,7 @@ namespace HRTime
             // 
             MoonLabel4.AutoSize = true;
             MoonLabel4.BackColor = Color.Transparent;
-            MoonLabel4.Font = new Font("Poppins", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel4.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel4.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel4.Location = new Point(104, 191);
             MoonLabel4.Name = "MoonLabel4";
@@ -445,7 +449,7 @@ namespace HRTime
             FoxButton6.DisabledTextColor = Color.FromArgb(98, 84, 129);
             FoxButton6.DownColor = Color.FromArgb(52, 42, 69);
             FoxButton6.EnabledCalc = true;
-            FoxButton6.Font = new Font("Poppins", 9.75f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxButton6.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FoxButton6.ForeColor = Color.FromArgb(98, 84, 129);
             FoxButton6.Location = new Point(267, 31);
             FoxButton6.Name = "FoxButton6";
@@ -453,6 +457,7 @@ namespace HRTime
             FoxButton6.Size = new Size(75, 24);
             FoxButton6.TabIndex = 8;
             FoxButton6.Text = "Browse";
+            FoxButton6.Click += FoxButton6_Click;
             // 
             // ForeverTextBox2
             // 
@@ -481,7 +486,7 @@ namespace HRTime
             FoxButton2.DisabledTextColor = Color.FromArgb(98, 84, 129);
             FoxButton2.DownColor = Color.FromArgb(52, 42, 69);
             FoxButton2.EnabledCalc = true;
-            FoxButton2.Font = new Font("Poppins", 9.75f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxButton2.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FoxButton2.ForeColor = Color.FromArgb(98, 84, 129);
             FoxButton2.Location = new Point(11, 65);
             FoxButton2.Name = "FoxButton2";
@@ -489,12 +494,13 @@ namespace HRTime
             FoxButton2.Size = new Size(92, 24);
             FoxButton2.TabIndex = 2;
             FoxButton2.Text = "Change";
+            FoxButton2.Click += FoxButton2_Click;
             // 
             // MoonLabel5
             // 
             MoonLabel5.AutoSize = true;
             MoonLabel5.BackColor = Color.Transparent;
-            MoonLabel5.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel5.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel5.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel5.Location = new Point(7, 6);
             MoonLabel5.Name = "MoonLabel5";
@@ -518,6 +524,18 @@ namespace HRTime
             TabPage4.TabIndex = 3;
             TabPage4.Text = "TabPage4";
             // 
+            // MoonLabel25
+            // 
+            MoonLabel25.AutoSize = true;
+            MoonLabel25.BackColor = Color.Transparent;
+            MoonLabel25.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel25.ForeColor = Color.FromArgb(98, 84, 129);
+            MoonLabel25.Location = new Point(89, 24);
+            MoonLabel25.Name = "MoonLabel25";
+            MoonLabel25.Size = new Size(32, 22);
+            MoonLabel25.TabIndex = 10;
+            MoonLabel25.Text = "null";
+            // 
             // ParrotCheckBox2
             // 
             ParrotCheckBox2.BadgeColor = Color.FromArgb(199, 175, 255);
@@ -527,7 +545,7 @@ namespace HRTime
             ParrotCheckBox2.CheckboxHoverColor = Color.FromArgb(62, 47, 87);
             ParrotCheckBox2.CheckboxStyle = ReaLTaiizor.Controls.ParrotCheckBox.Style.Material;
             ParrotCheckBox2.Checked = false;
-            ParrotCheckBox2.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            ParrotCheckBox2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ParrotCheckBox2.ForeColor = Color.FromArgb(98, 84, 129);
             ParrotCheckBox2.Location = new Point(11, 108);
             ParrotCheckBox2.Name = "ParrotCheckBox2";
@@ -538,6 +556,7 @@ namespace HRTime
             ParrotCheckBox2.Text = "Automatically download and apply updates";
             ParrotCheckBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
             ParrotCheckBox2.TickThickness = 2;
+            ParrotCheckBox2.Click += ParrotCheckBox2_Click;
             // 
             // ParrotCheckBox1
             // 
@@ -548,7 +567,7 @@ namespace HRTime
             ParrotCheckBox1.CheckboxHoverColor = Color.FromArgb(62, 47, 87);
             ParrotCheckBox1.CheckboxStyle = ReaLTaiizor.Controls.ParrotCheckBox.Style.Material;
             ParrotCheckBox1.Checked = false;
-            ParrotCheckBox1.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            ParrotCheckBox1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ParrotCheckBox1.ForeColor = Color.FromArgb(98, 84, 129);
             ParrotCheckBox1.Location = new Point(11, 82);
             ParrotCheckBox1.Name = "ParrotCheckBox1";
@@ -559,12 +578,13 @@ namespace HRTime
             ParrotCheckBox1.Text = "Automatically check for updates";
             ParrotCheckBox1.TextRenderingType = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
             ParrotCheckBox1.TickThickness = 2;
+            ParrotCheckBox1.Click += ParrotCheckBox1_Click;
             // 
             // MoonLabel7
             // 
             MoonLabel7.AutoSize = true;
             MoonLabel7.BackColor = Color.Transparent;
-            MoonLabel7.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel7.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel7.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel7.Location = new Point(7, 24);
             MoonLabel7.Name = "MoonLabel7";
@@ -582,7 +602,7 @@ namespace HRTime
             FoxButton3.DisabledTextColor = Color.FromArgb(98, 84, 129);
             FoxButton3.DownColor = Color.FromArgb(52, 42, 69);
             FoxButton3.EnabledCalc = true;
-            FoxButton3.Font = new Font("Poppins", 9.75f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxButton3.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FoxButton3.ForeColor = Color.FromArgb(98, 84, 129);
             FoxButton3.Location = new Point(11, 48);
             FoxButton3.Name = "FoxButton3";
@@ -590,12 +610,13 @@ namespace HRTime
             FoxButton3.Size = new Size(133, 24);
             FoxButton3.TabIndex = 1;
             FoxButton3.Text = "Check for updates";
+            FoxButton3.Click += FoxButton3_Click;
             // 
             // MoonLabel6
             // 
             MoonLabel6.AutoSize = true;
             MoonLabel6.BackColor = Color.Transparent;
-            MoonLabel6.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel6.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel6.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel6.Location = new Point(7, 6);
             MoonLabel6.Name = "MoonLabel6";
@@ -628,7 +649,7 @@ namespace HRTime
             FoxButton4.DisabledTextColor = Color.FromArgb(98, 84, 129);
             FoxButton4.DownColor = Color.FromArgb(52, 42, 69);
             FoxButton4.EnabledCalc = true;
-            FoxButton4.Font = new Font("Poppins", 9.75f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxButton4.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FoxButton4.ForeColor = Color.FromArgb(98, 84, 129);
             FoxButton4.Location = new Point(270, 220);
             FoxButton4.Name = "FoxButton4";
@@ -636,12 +657,13 @@ namespace HRTime
             FoxButton4.Size = new Size(99, 32);
             FoxButton4.TabIndex = 4;
             FoxButton4.Text = "Continue";
+            FoxButton4.Click += FoxButton4_Click;
             // 
             // MoonLabel10
             // 
             MoonLabel10.AutoSize = true;
             MoonLabel10.BackColor = Color.Transparent;
-            MoonLabel10.Font = new Font("Poppins", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel10.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel10.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel10.Location = new Point(205, 179);
             MoonLabel10.Name = "MoonLabel10";
@@ -653,7 +675,7 @@ namespace HRTime
             // 
             MoonLabel9.AutoSize = true;
             MoonLabel9.BackColor = Color.Transparent;
-            MoonLabel9.Font = new Font("Poppins", 12f, FontStyle.Bold, GraphicsUnit.Point);
+            MoonLabel9.Font = new Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point);
             MoonLabel9.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel9.Location = new Point(153, 179);
             MoonLabel9.Name = "MoonLabel9";
@@ -665,7 +687,7 @@ namespace HRTime
             // 
             MoonLabel8.AutoSize = true;
             MoonLabel8.BackColor = Color.Transparent;
-            MoonLabel8.Font = new Font("Poppins", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel8.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel8.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel8.Location = new Point(12, 179);
             MoonLabel8.Name = "MoonLabel8";
@@ -685,6 +707,24 @@ namespace HRTime
             // TabPage6
             // 
             TabPage6.BackColor = Color.FromArgb(22, 19, 29);
+            TabPage6.Controls.Add(foxButton8);
+            TabPage6.Controls.Add(moonLabel41);
+            TabPage6.Controls.Add(moonLabel40);
+            TabPage6.Controls.Add(foxButton7);
+            TabPage6.Controls.Add(moonLabel39);
+            TabPage6.Controls.Add(moonLabel38);
+            TabPage6.Controls.Add(moonLabel37);
+            TabPage6.Controls.Add(moonLabel36);
+            TabPage6.Controls.Add(moonLabel35);
+            TabPage6.Controls.Add(moonLabel34);
+            TabPage6.Controls.Add(moonLabel33);
+            TabPage6.Controls.Add(moonLabel32);
+            TabPage6.Controls.Add(moonLabel31);
+            TabPage6.Controls.Add(moonLabel30);
+            TabPage6.Controls.Add(moonLabel29);
+            TabPage6.Controls.Add(moonLabel28);
+            TabPage6.Controls.Add(moonLabel27);
+            TabPage6.Controls.Add(moonLabel26);
             TabPage6.Controls.Add(MoonLabel23);
             TabPage6.Controls.Add(MoonLabel22);
             TabPage6.Controls.Add(FoxButton5);
@@ -717,12 +757,228 @@ namespace HRTime
             TabPage6.TabIndex = 5;
             TabPage6.Text = "TabPage6";
             // 
+            // foxButton8
+            // 
+            foxButton8.BackColor = Color.Transparent;
+            foxButton8.BaseColor = Color.FromArgb(249, 249, 249);
+            foxButton8.BorderColor = Color.FromArgb(193, 193, 193);
+            foxButton8.DisabledBaseColor = Color.FromArgb(249, 249, 249);
+            foxButton8.DisabledBorderColor = Color.FromArgb(209, 209, 209);
+            foxButton8.DisabledTextColor = Color.FromArgb(166, 178, 190);
+            foxButton8.DownColor = Color.FromArgb(232, 232, 232);
+            foxButton8.EnabledCalc = true;
+            foxButton8.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            foxButton8.ForeColor = Color.FromArgb(66, 78, 90);
+            foxButton8.Location = new Point(423, 252);
+            foxButton8.Name = "foxButton8";
+            foxButton8.OverColor = Color.FromArgb(242, 242, 242);
+            foxButton8.Size = new Size(207, 24);
+            foxButton8.TabIndex = 42;
+            foxButton8.Text = "Restart App (keeps launch args)";
+            foxButton8.Click += foxButton8_Click;
+            // 
+            // moonLabel41
+            // 
+            moonLabel41.AutoSize = true;
+            moonLabel41.BackColor = Color.Transparent;
+            moonLabel41.ForeColor = Color.Gray;
+            moonLabel41.Location = new Point(553, 282);
+            moonLabel41.Name = "moonLabel41";
+            moonLabel41.Size = new Size(79, 15);
+            moonLabel41.TabIndex = 41;
+            moonLabel41.Text = "moonLabel41";
+            // 
+            // moonLabel40
+            // 
+            moonLabel40.AutoSize = true;
+            moonLabel40.BackColor = Color.Transparent;
+            moonLabel40.ForeColor = Color.Gray;
+            moonLabel40.Location = new Point(444, 282);
+            moonLabel40.Name = "moonLabel40";
+            moonLabel40.Size = new Size(103, 15);
+            moonLabel40.TabIndex = 40;
+            moonLabel40.Text = "FirstSetupNeeded:";
+            // 
+            // foxButton7
+            // 
+            foxButton7.BackColor = Color.Transparent;
+            foxButton7.BaseColor = Color.FromArgb(249, 249, 249);
+            foxButton7.BorderColor = Color.FromArgb(193, 193, 193);
+            foxButton7.DisabledBaseColor = Color.FromArgb(249, 249, 249);
+            foxButton7.DisabledBorderColor = Color.FromArgb(209, 209, 209);
+            foxButton7.DisabledTextColor = Color.FromArgb(166, 178, 190);
+            foxButton7.DownColor = Color.FromArgb(232, 232, 232);
+            foxButton7.EnabledCalc = true;
+            foxButton7.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            foxButton7.ForeColor = Color.FromArgb(66, 78, 90);
+            foxButton7.Location = new Point(423, 222);
+            foxButton7.Name = "foxButton7";
+            foxButton7.OverColor = Color.FromArgb(242, 242, 242);
+            foxButton7.Size = new Size(206, 24);
+            foxButton7.TabIndex = 39;
+            foxButton7.Text = "Open config folder (broken rn)";
+            foxButton7.Click += foxButton7_Click;
+            // 
+            // moonLabel39
+            // 
+            moonLabel39.AutoSize = true;
+            moonLabel39.BackColor = Color.Transparent;
+            moonLabel39.ForeColor = Color.Gray;
+            moonLabel39.Location = new Point(100, 297);
+            moonLabel39.Name = "moonLabel39";
+            moonLabel39.Size = new Size(79, 15);
+            moonLabel39.TabIndex = 38;
+            moonLabel39.Text = "moonLabel39";
+            // 
+            // moonLabel38
+            // 
+            moonLabel38.AutoSize = true;
+            moonLabel38.BackColor = Color.Transparent;
+            moonLabel38.ForeColor = Color.Gray;
+            moonLabel38.Location = new Point(90, 282);
+            moonLabel38.Name = "moonLabel38";
+            moonLabel38.Size = new Size(79, 15);
+            moonLabel38.TabIndex = 37;
+            moonLabel38.Text = "moonLabel38";
+            // 
+            // moonLabel37
+            // 
+            moonLabel37.AutoSize = true;
+            moonLabel37.BackColor = Color.Transparent;
+            moonLabel37.ForeColor = Color.Gray;
+            moonLabel37.Location = new Point(115, 267);
+            moonLabel37.Name = "moonLabel37";
+            moonLabel37.Size = new Size(79, 15);
+            moonLabel37.TabIndex = 36;
+            moonLabel37.Text = "moonLabel37";
+            // 
+            // moonLabel36
+            // 
+            moonLabel36.AutoSize = true;
+            moonLabel36.BackColor = Color.Transparent;
+            moonLabel36.ForeColor = Color.Gray;
+            moonLabel36.Location = new Point(107, 252);
+            moonLabel36.Name = "moonLabel36";
+            moonLabel36.Size = new Size(79, 15);
+            moonLabel36.TabIndex = 35;
+            moonLabel36.Text = "moonLabel36";
+            // 
+            // moonLabel35
+            // 
+            moonLabel35.AutoSize = true;
+            moonLabel35.BackColor = Color.Transparent;
+            moonLabel35.ForeColor = Color.Gray;
+            moonLabel35.Location = new Point(100, 237);
+            moonLabel35.Name = "moonLabel35";
+            moonLabel35.Size = new Size(79, 15);
+            moonLabel35.TabIndex = 34;
+            moonLabel35.Text = "moonLabel35";
+            // 
+            // moonLabel34
+            // 
+            moonLabel34.AutoSize = true;
+            moonLabel34.BackColor = Color.Transparent;
+            moonLabel34.ForeColor = Color.Gray;
+            moonLabel34.Location = new Point(78, 222);
+            moonLabel34.Name = "moonLabel34";
+            moonLabel34.Size = new Size(79, 15);
+            moonLabel34.TabIndex = 33;
+            moonLabel34.Text = "moonLabel34";
+            // 
+            // moonLabel33
+            // 
+            moonLabel33.AutoSize = true;
+            moonLabel33.BackColor = Color.Transparent;
+            moonLabel33.ForeColor = Color.Gray;
+            moonLabel33.Location = new Point(78, 207);
+            moonLabel33.Name = "moonLabel33";
+            moonLabel33.Size = new Size(79, 15);
+            moonLabel33.TabIndex = 32;
+            moonLabel33.Text = "moonLabel33";
+            // 
+            // moonLabel32
+            // 
+            moonLabel32.AutoSize = true;
+            moonLabel32.BackColor = Color.Transparent;
+            moonLabel32.ForeColor = Color.Gray;
+            moonLabel32.Location = new Point(10, 297);
+            moonLabel32.Name = "moonLabel32";
+            moonLabel32.Size = new Size(84, 15);
+            moonLabel32.TabIndex = 31;
+            moonLabel32.Text = "AutoUpCheck:";
+            // 
+            // moonLabel31
+            // 
+            moonLabel31.AutoSize = true;
+            moonLabel31.BackColor = Color.Transparent;
+            moonLabel31.ForeColor = Color.Gray;
+            moonLabel31.Location = new Point(10, 282);
+            moonLabel31.Name = "moonLabel31";
+            moonLabel31.Size = new Size(74, 15);
+            moonLabel31.TabIndex = 30;
+            moonLabel31.Text = "AutoUpdate:";
+            // 
+            // moonLabel30
+            // 
+            moonLabel30.AutoSize = true;
+            moonLabel30.BackColor = Color.Transparent;
+            moonLabel30.ForeColor = Color.Gray;
+            moonLabel30.Location = new Point(9, 267);
+            moonLabel30.Name = "moonLabel30";
+            moonLabel30.Size = new Size(100, 15);
+            moonLabel30.TabIndex = 29;
+            moonLabel30.Text = "INTERVAL_VALUE:";
+            // 
+            // moonLabel29
+            // 
+            moonLabel29.AutoSize = true;
+            moonLabel29.BackColor = Color.Transparent;
+            moonLabel29.ForeColor = Color.Gray;
+            moonLabel29.Location = new Point(9, 252);
+            moonLabel29.Name = "moonLabel29";
+            moonLabel29.Size = new Size(92, 15);
+            moonLabel29.TabIndex = 28;
+            moonLabel29.Text = "INTERVAL_TYPE:";
+            // 
+            // moonLabel28
+            // 
+            moonLabel28.AutoSize = true;
+            moonLabel28.BackColor = Color.Transparent;
+            moonLabel28.ForeColor = Color.Gray;
+            moonLabel28.Location = new Point(9, 237);
+            moonLabel28.Name = "moonLabel28";
+            moonLabel28.Size = new Size(85, 15);
+            moonLabel28.TabIndex = 27;
+            moonLabel28.Text = "NextDoseDate:";
+            // 
+            // moonLabel27
+            // 
+            moonLabel27.AutoSize = true;
+            moonLabel27.BackColor = Color.Transparent;
+            moonLabel27.ForeColor = Color.Gray;
+            moonLabel27.Location = new Point(9, 222);
+            moonLabel27.Name = "moonLabel27";
+            moonLabel27.Size = new Size(66, 15);
+            moonLabel27.TabIndex = 26;
+            moonLabel27.Text = "AudioPath:";
+            // 
+            // moonLabel26
+            // 
+            moonLabel26.AutoSize = true;
+            moonLabel26.BackColor = Color.Transparent;
+            moonLabel26.ForeColor = Color.Gray;
+            moonLabel26.Location = new Point(9, 207);
+            moonLabel26.Name = "moonLabel26";
+            moonLabel26.Size = new Size(63, 15);
+            moonLabel26.TabIndex = 25;
+            moonLabel26.Text = "Username:";
+            // 
             // MoonLabel23
             // 
             MoonLabel23.AutoSize = true;
             MoonLabel23.BackColor = Color.Transparent;
             MoonLabel23.ForeColor = Color.Gray;
-            MoonLabel23.Location = new Point(150, 229);
+            MoonLabel23.Location = new Point(93, 192);
             MoonLabel23.Name = "MoonLabel23";
             MoonLabel23.Size = new Size(79, 15);
             MoonLabel23.TabIndex = 24;
@@ -733,11 +989,11 @@ namespace HRTime
             MoonLabel22.AutoSize = true;
             MoonLabel22.BackColor = Color.Transparent;
             MoonLabel22.ForeColor = Color.Gray;
-            MoonLabel22.Location = new Point(9, 229);
+            MoonLabel22.Location = new Point(9, 192);
             MoonLabel22.Name = "MoonLabel22";
-            MoonLabel22.Size = new Size(135, 15);
+            MoonLabel22.Size = new Size(78, 15);
             MoonLabel22.TabIndex = 23;
-            MoonLabel22.Text = "DEBUG - Current date is:";
+            MoonLabel22.Text = "CurrrentDate:";
             // 
             // FoxButton5
             // 
@@ -749,20 +1005,21 @@ namespace HRTime
             FoxButton5.DisabledTextColor = Color.FromArgb(166, 178, 190);
             FoxButton5.DownColor = Color.FromArgb(232, 232, 232);
             FoxButton5.EnabledCalc = true;
-            FoxButton5.Font = new Font("Segoe UI", 10f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxButton5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             FoxButton5.ForeColor = Color.FromArgb(66, 78, 90);
-            FoxButton5.Location = new Point(10, 198);
+            FoxButton5.Location = new Point(423, 192);
             FoxButton5.Name = "FoxButton5";
             FoxButton5.OverColor = Color.FromArgb(242, 242, 242);
-            FoxButton5.Size = new Size(134, 24);
+            FoxButton5.Size = new Size(206, 24);
             FoxButton5.TabIndex = 22;
-            FoxButton5.Text = "DEBUG - Show Alert";
+            FoxButton5.Text = "Trigger Alert";
+            FoxButton5.Click += FoxButton5_Click;
             // 
             // MoonLabel21
             // 
             MoonLabel21.AutoSize = true;
             MoonLabel21.BackColor = Color.Transparent;
-            MoonLabel21.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel21.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel21.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel21.Location = new Point(526, 41);
             MoonLabel21.Name = "MoonLabel21";
@@ -774,7 +1031,7 @@ namespace HRTime
             // 
             MoonLabel20.AutoSize = true;
             MoonLabel20.BackColor = Color.Transparent;
-            MoonLabel20.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel20.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel20.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel20.Location = new Point(525, 23);
             MoonLabel20.Name = "MoonLabel20";
@@ -786,7 +1043,7 @@ namespace HRTime
             // 
             MoonLabel19.AutoSize = true;
             MoonLabel19.BackColor = Color.Transparent;
-            MoonLabel19.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel19.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel19.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel19.Location = new Point(542, 4);
             MoonLabel19.Name = "MoonLabel19";
@@ -826,22 +1083,23 @@ namespace HRTime
             NightLinkLabel1.ActiveLinkColor = Color.FromArgb(168, 130, 255);
             NightLinkLabel1.AutoSize = true;
             NightLinkLabel1.BackColor = Color.Transparent;
-            NightLinkLabel1.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            NightLinkLabel1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             NightLinkLabel1.LinkBehavior = LinkBehavior.HoverUnderline;
             NightLinkLabel1.LinkColor = Color.FromArgb(199, 175, 255);
-            NightLinkLabel1.Location = new Point(405, 310);
+            NightLinkLabel1.Location = new Point(413, 310);
             NightLinkLabel1.Name = "NightLinkLabel1";
             NightLinkLabel1.Size = new Size(65, 22);
             NightLinkLabel1.TabIndex = 15;
             NightLinkLabel1.TabStop = true;
             NightLinkLabel1.Text = "donation";
             NightLinkLabel1.VisitedLinkColor = Color.FromArgb(199, 175, 255);
+            NightLinkLabel1.LinkClicked += NightLinkLabel1_LinkClicked;
             // 
             // MoonLabel18
             // 
             MoonLabel18.AutoSize = true;
             MoonLabel18.BackColor = Color.Transparent;
-            MoonLabel18.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel18.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel18.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel18.Location = new Point(10, 310);
             MoonLabel18.Name = "MoonLabel18";
@@ -854,59 +1112,63 @@ namespace HRTime
             ForeverButton12.BackColor = Color.Transparent;
             ForeverButton12.BackgroundImage = (Image)resources.GetObject("ForeverButton12.BackgroundImage");
             ForeverButton12.BaseColor = Color.Transparent;
-            ForeverButton12.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton12.Location = new Point(147, 95);
             ForeverButton12.Name = "ForeverButton12";
             ForeverButton12.Rounded = false;
             ForeverButton12.Size = new Size(12, 12);
             ForeverButton12.TabIndex = 13;
             ForeverButton12.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton12.Click += ForeverButton12_Click;
             // 
             // ForeverButton11
             // 
             ForeverButton11.BackColor = Color.Transparent;
             ForeverButton11.BackgroundImage = (Image)resources.GetObject("ForeverButton11.BackgroundImage");
             ForeverButton11.BaseColor = Color.Transparent;
-            ForeverButton11.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton11.Location = new Point(119, 77);
             ForeverButton11.Name = "ForeverButton11";
             ForeverButton11.Rounded = false;
             ForeverButton11.Size = new Size(12, 12);
             ForeverButton11.TabIndex = 12;
             ForeverButton11.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton11.Click += ForeverButton11_Click;
             // 
             // ForeverButton10
             // 
             ForeverButton10.BackColor = Color.Transparent;
             ForeverButton10.BackgroundImage = (Image)resources.GetObject("ForeverButton10.BackgroundImage");
             ForeverButton10.BaseColor = Color.Transparent;
-            ForeverButton10.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton10.Location = new Point(129, 95);
             ForeverButton10.Name = "ForeverButton10";
             ForeverButton10.Rounded = false;
             ForeverButton10.Size = new Size(12, 12);
             ForeverButton10.TabIndex = 11;
             ForeverButton10.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton10.Click += ForeverButton10_Click;
             // 
             // ForeverButton9
             // 
             ForeverButton9.BackColor = Color.Transparent;
             ForeverButton9.BackgroundImage = (Image)resources.GetObject("ForeverButton9.BackgroundImage");
             ForeverButton9.BaseColor = Color.Transparent;
-            ForeverButton9.Font = new Font("Segoe UI", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            ForeverButton9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeverButton9.Location = new Point(101, 77);
             ForeverButton9.Name = "ForeverButton9";
             ForeverButton9.Rounded = false;
             ForeverButton9.Size = new Size(12, 12);
             ForeverButton9.TabIndex = 10;
             ForeverButton9.TextColor = Color.FromArgb(243, 243, 243);
+            ForeverButton9.Click += ForeverButton9_Click;
             // 
             // FoxLinkLabel2
             // 
             FoxLinkLabel2.BackColor = Color.Transparent;
             FoxLinkLabel2.DownColor = Color.FromArgb(119, 104, 153);
             FoxLinkLabel2.EnabledCalc = true;
-            FoxLinkLabel2.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxLinkLabel2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FoxLinkLabel2.ForeColor = Color.FromArgb(199, 175, 255);
             FoxLinkLabel2.Location = new Point(10, 165);
             FoxLinkLabel2.Name = "FoxLinkLabel2";
@@ -914,13 +1176,14 @@ namespace HRTime
             FoxLinkLabel2.Size = new Size(283, 18);
             FoxLinkLabel2.TabIndex = 9;
             FoxLinkLabel2.Text = "https://diyhrt.info";
+            FoxLinkLabel2.Click += FoxLinkLabel2_Click;
             // 
             // FoxLinkLabel1
             // 
             FoxLinkLabel1.BackColor = Color.Transparent;
             FoxLinkLabel1.DownColor = Color.FromArgb(119, 104, 153);
             FoxLinkLabel1.EnabledCalc = true;
-            FoxLinkLabel1.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            FoxLinkLabel1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FoxLinkLabel1.ForeColor = Color.FromArgb(199, 175, 255);
             FoxLinkLabel1.Location = new Point(10, 148);
             FoxLinkLabel1.Name = "FoxLinkLabel1";
@@ -928,12 +1191,13 @@ namespace HRTime
             FoxLinkLabel1.Size = new Size(283, 18);
             FoxLinkLabel1.TabIndex = 8;
             FoxLinkLabel1.Text = "https://diyhrt.market/transfem-hrt-guide";
+            FoxLinkLabel1.Click += FoxLinkLabel1_Click;
             // 
             // MoonLabel17
             // 
             MoonLabel17.AutoSize = true;
             MoonLabel17.BackColor = Color.Transparent;
-            MoonLabel17.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel17.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel17.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel17.Location = new Point(7, 129);
             MoonLabel17.Name = "MoonLabel17";
@@ -945,7 +1209,7 @@ namespace HRTime
             // 
             MoonLabel16.AutoSize = true;
             MoonLabel16.BackColor = Color.Transparent;
-            MoonLabel16.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel16.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel16.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel16.Location = new Point(7, 92);
             MoonLabel16.Name = "MoonLabel16";
@@ -957,7 +1221,7 @@ namespace HRTime
             // 
             MoonLabel15.AutoSize = true;
             MoonLabel15.BackColor = Color.Transparent;
-            MoonLabel15.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel15.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel15.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel15.Location = new Point(7, 74);
             MoonLabel15.Name = "MoonLabel15";
@@ -969,7 +1233,7 @@ namespace HRTime
             // 
             MoonLabel14.AutoSize = true;
             MoonLabel14.BackColor = Color.Transparent;
-            MoonLabel14.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel14.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel14.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel14.Location = new Point(7, 57);
             MoonLabel14.Name = "MoonLabel14";
@@ -981,7 +1245,7 @@ namespace HRTime
             // 
             MoonLabel13.AutoSize = true;
             MoonLabel13.BackColor = Color.Transparent;
-            MoonLabel13.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel13.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel13.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel13.Location = new Point(96, 24);
             MoonLabel13.Name = "MoonLabel13";
@@ -1002,7 +1266,7 @@ namespace HRTime
             // 
             MoonLabel12.AutoSize = true;
             MoonLabel12.BackColor = Color.Transparent;
-            MoonLabel12.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel12.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel12.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel12.Location = new Point(7, 24);
             MoonLabel12.Name = "MoonLabel12";
@@ -1014,7 +1278,7 @@ namespace HRTime
             // 
             MoonLabel11.AutoSize = true;
             MoonLabel11.BackColor = Color.Transparent;
-            MoonLabel11.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel11.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel11.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel11.Location = new Point(7, 6);
             MoonLabel11.Name = "MoonLabel11";
@@ -1038,7 +1302,7 @@ namespace HRTime
             // 
             MoonLabel24.AutoSize = true;
             MoonLabel24.BackColor = Color.Transparent;
-            MoonLabel24.Font = new Font("Poppins", 12f, FontStyle.Regular, GraphicsUnit.Point);
+            MoonLabel24.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MoonLabel24.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel24.Location = new Point(199, 185);
             MoonLabel24.Name = "MoonLabel24";
@@ -1059,21 +1323,9 @@ namespace HRTime
             // 
             OpenFileDialog1.FileName = "OpenFileDialog1";
             // 
-            // MoonLabel25
-            // 
-            MoonLabel25.AutoSize = true;
-            MoonLabel25.BackColor = Color.Transparent;
-            MoonLabel25.Font = new Font("Poppins", 9f, FontStyle.Regular, GraphicsUnit.Point);
-            MoonLabel25.ForeColor = Color.FromArgb(98, 84, 129);
-            MoonLabel25.Location = new Point(89, 24);
-            MoonLabel25.Name = "MoonLabel25";
-            MoonLabel25.Size = new Size(32, 22);
-            MoonLabel25.TabIndex = 10;
-            MoonLabel25.Text = "null";
-            // 
             // dashboard
             // 
-            AutoScaleDimensions = new SizeF(7f, 15f);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(22, 19, 29);
             ClientSize = new Size(711, 406);
@@ -1090,6 +1342,9 @@ namespace HRTime
             Name = "dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HRTime Settings";
+            Closed += dashboard_Close;
+            Load += dashboard_Load;
+            MouseDown += dashboard_MouseDown;
             Panel1.ResumeLayout(false);
             Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
@@ -1115,12 +1370,10 @@ namespace HRTime
             TabPage7.ResumeLayout(false);
             TabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PictureBox8).EndInit();
-            MouseDown += new MouseEventHandler(dashboard_MouseDown);
-            Closed += new EventHandler(dashboard_Close);
-            Load += new EventHandler(dashboard_Load);
             ResumeLayout(false);
             PerformLayout();
         }
+
         internal Panel Panel1;
         internal Panel Panel2;
         internal PictureBox PictureBox1;
@@ -1190,5 +1443,23 @@ namespace HRTime
         internal ReaLTaiizor.Controls.MoonLabel MoonLabel24;
         internal PictureBox PictureBox8;
         internal ReaLTaiizor.Controls.MoonLabel MoonLabel25;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel28;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel27;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel26;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel39;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel38;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel37;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel36;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel35;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel34;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel33;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel32;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel31;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel30;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel29;
+        internal ReaLTaiizor.Controls.FoxButton foxButton8;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel41;
+        internal ReaLTaiizor.Controls.MoonLabel moonLabel40;
+        internal ReaLTaiizor.Controls.FoxButton foxButton7;
     }
 }

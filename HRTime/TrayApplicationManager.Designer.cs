@@ -70,6 +70,7 @@ namespace HRTime
             OpenMenuItem = new ToolStripMenuItem();
             MenuSeparator = new ToolStripSeparator();
             ExitMenuItem = new ToolStripMenuItem();
+            timer1 = new Timer(components);
             RightClickMenu.SuspendLayout();
             // 
             // TrayIcon
@@ -104,6 +105,10 @@ namespace HRTime
             ExitMenuItem.Size = new Size(116, 22);
             ExitMenuItem.Text = "E&xit";
             ExitMenuItem.Click += ExitMenuItem_Click;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             RightClickMenu.ResumeLayout(false);
         }
 
@@ -112,7 +117,7 @@ namespace HRTime
         internal ToolStripMenuItem OpenMenuItem;
         internal ToolStripSeparator MenuSeparator;
         internal ToolStripMenuItem ExitMenuItem;
-
+        public Timer timer1;
     }
 
 } //end of root namespace

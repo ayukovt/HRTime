@@ -4,9 +4,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Shapes;
 using AutoUpdaterDotNET;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
+using Path = System.IO.Path;
 
 namespace HRTime
 {
@@ -38,13 +40,9 @@ namespace HRTime
         }
         private void dashboard_Close(object sender, EventArgs e)
         {
-            // Minimize the form to the tray
-            this.Hide(); // This hides the form without closing it
-    
-            // Show balloon tip (optional)
-            TrayApplicationManager trybarManager = TrayApplicationManager.Instance;  // Use existing instance
-            trybarManager.TrayIcon.BalloonTipText = "Minimized to system tray.";
-            trybarManager.TrayIcon.ShowBalloonTip(500);
+            var trayappman = new TrayApplicationManager();
+            trayappman.TrayIcon.BalloonTipText = "Minimized to system tray.";
+            trayappman.TrayIcon.ShowBalloonTip(500);
         }
         private void ForeverButton1_Click(object sender, EventArgs e)
         {
@@ -147,6 +145,14 @@ namespace HRTime
 
         private void dashboard_Load(object sender, EventArgs e)
         {
+            moonLabel33.Text = My.MySettingsProperty.Settings.Username;
+            moonLabel34.Text = My.MySettingsProperty.Settings.AudioPath;
+            moonLabel35.Text = My.MySettingsProperty.Settings.NextDoseDate;
+            moonLabel36.Text = My.MySettingsProperty.Settings.INTERVAL_TYPE;
+            moonLabel37.Text = My.MySettingsProperty.Settings.INTERVAL_VALUE;
+            moonLabel38.Text = My.MySettingsProperty.Settings.AutoUpdate;
+            moonLabel39.Text = My.MySettingsProperty.Settings.AutoUpCheck;
+            moonLabel41.Text = My.MySettingsProperty.Settings.FirstSetupNeeded;
             if (string.IsNullOrEmpty(My.MySettingsProperty.Settings.UpLastChecked))
             {
                 MoonLabel25.Text = "null";
@@ -186,37 +192,43 @@ namespace HRTime
         {
             if (string.IsNullOrEmpty(ForeverTextBox1.Text))
             {
-                Debug.WriteLine("textbox is empty msgbox");
                 MessageBox.Show("Please enter something in the text box first.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 My.MySettingsProperty.Settings.Username = ForeverTextBox1.Text;
                 My.MySettingsProperty.Settings.Save();
-                Debug.WriteLine("name = " + ForeverTextBox1.Text);
+                MessageBox.Show("Username has been successfully changed.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             if (fourchanTerms.Any(term => Strings.InStr(ForeverTextBox1.Text, term, Constants.vbTextCompare) > 0))
             {
-                Debug.WriteLine("4chan term msgbox");
                 MessageBox.Show("4chan term detected. please get off 4chan and go outside im begging you", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 My.MySettingsProperty.Settings.Username = ForeverTextBox1.Text;
                 My.MySettingsProperty.Settings.Save();
-                Debug.WriteLine("name = " + ForeverTextBox1.Text);
+                MessageBox.Show("Username has been successfully changed.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void FoxButton2_Click(object sender, EventArgs e)
         {
+            // I think with the check I added in FoxButton5, this is impossible to be NULL, but just in case...
             if (!string.IsNullOrEmpty(ForeverTextBox2.Text))
             {
-                if (Path.GetExtension(ForeverTextBox2.Text).ToLower() == ".wav")
+
+                // The most important check: MAKE SURE IT IS A .WAV FILE.
+                // technically this can be improved if a user is dumb and renames a .mp3 file to .wav and doesn't actually convert it but honestly that's on them...
+                var extnCheck = Path.GetExtension(ForeverTextBox2.Text).ToLower();
+
+                if (extnCheck == ".wav" || extnCheck == ".mp3" || extnCheck == ".aac" || extnCheck == ".wma")
                 {
+
+                    // If a user, for some reason, selects a file that doesn't exist. This seems impossible and like a useless check but this actually can help us for cases when we don't have read permission for a file, so it deserves to be here.
+
                     if (File.Exists(ForeverTextBox2.Text))
                     {
                         My.MySettingsProperty.Settings.AudioPath = ForeverTextBox2.Text;
                         My.MySettingsProperty.Settings.Save();
-                        Debug.WriteLine("audiodir = " + ForeverTextBox2.Text);
-                        MaterialTabControl1.SelectedTab = TabPage5;
+                        MessageBox.Show("Audio path has been successfully changed.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -225,13 +237,15 @@ namespace HRTime
                 }
                 else
                 {
-                    MessageBox.Show("Invalid file type. Please select a valid .wav audio file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid file type. Please select a valid audio file.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
                 MessageBox.Show("Please select an audio file first.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
         }
 
         private void FoxButton4_Click(object sender, EventArgs e)
@@ -245,6 +259,7 @@ namespace HRTime
                 My.MySettingsProperty.Settings.INTERVAL_VALUE = null;
                 My.MySettingsProperty.Settings.AudioPath = null;
                 My.MySettingsProperty.Settings.AutoUpdate = null;
+                My.MySettingsProperty.Settings.AutoUpCheck = null;
                 My.MySettingsProperty.Settings.FirstSetupNeeded = "true";
                 My.MySettingsProperty.Settings.Save();
                 Application.Restart();
@@ -253,7 +268,7 @@ namespace HRTime
 
         private void FoxButton3_Click(object sender, EventArgs e)
         {
-            AutoUpdater.Start("https://rbsoft.org/updates/AutoUpdaterTest.xml");
+            AutoUpdater.Start("https://ayuworks.xyz/hrtime_updater.xml");
             My.MySettingsProperty.Settings.UpLastChecked = Conversions.ToString(DateTime.Now);
             My.MySettingsProperty.Settings.Save();
             MoonLabel25.Text = My.MySettingsProperty.Settings.UpLastChecked;
@@ -289,32 +304,41 @@ namespace HRTime
             }
         }
 
-        private List<string> fourchanTerms = new List<string>() { 
-            "passoid", "gigahon", "ogrehon", 
-            "ogre", "boymoder", "manmoder", 
+        private List<string> fourchanTerms = new List<string>() {
+            "passoid", "gigahon", "ogrehon",
+            "ogre", "boymoder", "manmoder",
             "tranny", "gorillamoder", "brickhon",
-            "boomerhon", "bitterhon", "heighthon", 
-            "honmoder", "innerhon", "outerhon", 
-            "rapehon", "reddithon", "ribcagehon", 
-            "shadowhon", "shoulderhon", "sneedhon", 
-            "twinkhon", "iwnbam", "gayden", 
-            "poonbro", "pooner", "tunapoon", 
-            "gigapoon", "manlet", "tranner", 
-            "troon", "transmaxxing", "youngshit", 
-            "midshit", "oldshit", "agp", "husstuss", 
-            "boyremove", "trannerexia", "luckshit", 
-            "malefail", "mog", "mogging", 
+            "boomerhon", "bitterhon", "heighthon",
+            "honmoder", "innerhon", "outerhon",
+            "rapehon", "reddithon", "ribcagehon",
+            "shadowhon", "shoulderhon", "sneedhon",
+            "twinkhon", "iwnbam", "gayden",
+            "poonbro", "pooner", "tunapoon",
+            "gigapoon", "manlet", "tranner",
+            "troon", "transmaxxing", "youngshit",
+            "midshit", "oldshit", "agp", "husstuss",
+            "boyremove", "trannerexia", "luckshit",
+            "malefail", "mog", "mogging",
             "mogs", "repper", "hsts" }; // copied from firstsetup bc apparently i cant just reference it in a different .cs file
 
         private void FoxButton6_Click(object sender, EventArgs e)
         {
-            OpenFileDialog1.Filter = "wav files|*.wav";
+            OpenFileDialog1.Filter = "Audio files|*.mp3;*.wav;*.aac;*.wma";
             OpenFileDialog1.Title = "Select the reminder audio file";
             if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Debug.WriteLine("filedialog opened");
-                ForeverTextBox2.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) + @"\" + Path.GetFileName(OpenFileDialog1.FileName);
+                ForeverTextBox2.Text = System.IO.Path.GetDirectoryName(OpenFileDialog1.FileName) + @"\" + System.IO.Path.GetFileName(OpenFileDialog1.FileName);
             }
+        }
+
+        private void foxButton7_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\" + Environment.UserName + @"\AppData\Local\ayuworks.xyz\");
+        }
+
+        private void foxButton8_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

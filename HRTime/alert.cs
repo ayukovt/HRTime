@@ -11,7 +11,6 @@ namespace HRTime
 
     public partial class alert
     {
-        TrayApplicationManager trybarManager = new TrayApplicationManager();
         IWavePlayer waveOutDevice = new WaveOut();
         AudioFileReader audioFileReader = new AudioFileReader(My.MySettingsProperty.Settings.AudioPath);
         public alert()
@@ -20,10 +19,10 @@ namespace HRTime
         }
         private void alert_Load(object sender, EventArgs e)
         {
+            var trayappman = new TrayApplicationManager();
             SetBounds(Screen.GetWorkingArea(this).Width - Width, Screen.GetWorkingArea(this).Height - Height, Width, Height);
             if (System.IO.File.Exists(My.MySettingsProperty.Settings.AudioPath))
             {
-
                 waveOutDevice.Init(audioFileReader);
                 waveOutDevice.Play();
             }
@@ -31,6 +30,7 @@ namespace HRTime
             {
                 MessageBox.Show("The specified audio file could not be found. Please update your audio path in settings.", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            trayappman.TrayIcon.Visible = false;
         }
         private void alert_Close(object sender, EventArgs e)
         {
@@ -41,6 +41,7 @@ namespace HRTime
 
         private void FoxButton2_Click(object sender, EventArgs e)
         {
+            var trayappman = new TrayApplicationManager();
             if (My.MySettingsProperty.Settings.INTERVAL_TYPE == "day")
             {
                 My.MySettingsProperty.Settings.NextDoseDate = Conversions.ToString(DateTime.Now.AddDays(Conversions.ToDouble(My.MySettingsProperty.Settings.INTERVAL_VALUE)));
@@ -62,9 +63,11 @@ namespace HRTime
             {
                 MessageBox.Show("Good job, " + My.MySettingsProperty.Settings.Username + "! Keep it up <3", "HRTime", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            trybarManager.TrayIcon.BalloonTipText = "Your next HRT reminder will run on: " + My.MySettingsProperty.Settings.NextDoseDate;
-            trybarManager.TrayIcon.ShowBalloonTip(500);
+            //im aware the windows notif displays as Microsoft.Explorer.Notification do not report this to me idk how to fix this but I will eventually
+            trayappman.TrayIcon.BalloonTipText = "Your next HRT reminder will run on: " + My.MySettingsProperty.Settings.NextDoseDate;
+            trayappman.TrayIcon.ShowBalloonTip(500);
             IWavePlayer waveOutDevice = new WaveOut();
+            trayappman.TrayIcon.Visible = false;
             Close();
         }
 
