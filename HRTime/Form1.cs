@@ -20,57 +20,57 @@ namespace HRTime
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            var daboard = My.MyProject.Forms.dashboard;
             //i am so sorry for pulling a yandev please forgive me ill fix this at some point (or pls commit a better way on github im gonna praise u forever if u do)
-            My.MyProject.Forms.dashboard.FoxButton5.Hide();
-            My.MyProject.Forms.dashboard.foxButton7.Hide();
-            My.MyProject.Forms.dashboard.foxButton8.Hide();
-            My.MyProject.Forms.dashboard.MoonLabel22.Hide();
-            My.MyProject.Forms.dashboard.MoonLabel23.Hide();
-            My.MyProject.Forms.dashboard.moonLabel26.Hide();
-            My.MyProject.Forms.dashboard.moonLabel27.Hide();
-            My.MyProject.Forms.dashboard.moonLabel28.Hide();
-            My.MyProject.Forms.dashboard.moonLabel29.Hide();
-            My.MyProject.Forms.dashboard.moonLabel30.Hide();
-            My.MyProject.Forms.dashboard.moonLabel31.Hide();
-            My.MyProject.Forms.dashboard.moonLabel32.Hide();
-            My.MyProject.Forms.dashboard.moonLabel33.Hide();
-            My.MyProject.Forms.dashboard.moonLabel34.Hide();
-            My.MyProject.Forms.dashboard.moonLabel35.Hide();
-            My.MyProject.Forms.dashboard.moonLabel36.Hide();
-            My.MyProject.Forms.dashboard.moonLabel37.Hide();
-            My.MyProject.Forms.dashboard.moonLabel38.Hide();
-            My.MyProject.Forms.dashboard.moonLabel39.Hide();
-            My.MyProject.Forms.dashboard.moonLabel40.Hide();
-            My.MyProject.Forms.dashboard.moonLabel41.Hide();
+            daboard.FoxButton5.Hide();
+            daboard.foxButton7.Hide();
+            daboard.foxButton8.Hide();
+            daboard.MoonLabel22.Hide();
+            daboard.MoonLabel23.Hide();
+            daboard.moonLabel26.Hide();
+            daboard.moonLabel27.Hide();
+            daboard.moonLabel28.Hide();
+            daboard.moonLabel29.Hide();
+            daboard.moonLabel30.Hide();
+            daboard.moonLabel31.Hide();
+            daboard.moonLabel32.Hide();
+            daboard.moonLabel33.Hide();
+            daboard.moonLabel34.Hide();
+            daboard.moonLabel35.Hide();
+            daboard.moonLabel36.Hide();
+            daboard.moonLabel37.Hide();
+            daboard.moonLabel38.Hide();
+            daboard.moonLabel39.Hide();
+            daboard.moonLabel40.Hide();
+            daboard.moonLabel41.Hide();
 
             foreach (string argument in My.MyProject.Application.CommandLineArgs)
             {
                 if (argument == "-debug")
                 {
-                    My.MyProject.Forms.dashboard.Text = "[DEBUG] HRTime Settings";
+                    daboard.Text = "[DEBUG] HRTime Settings";
                     My.MyProject.Forms.firstsetup.Text = "[DEBUG] HRTime First Setup";
-                    My.MyProject.Forms.dashboard.FoxButton5.Show();
-                    My.MyProject.Forms.dashboard.foxButton7.Show();
-                    My.MyProject.Forms.dashboard.foxButton8.Show();
-                    My.MyProject.Forms.dashboard.MoonLabel22.Show();
-                    My.MyProject.Forms.dashboard.MoonLabel23.Show();
-                    My.MyProject.Forms.dashboard.moonLabel26.Show();
-                    My.MyProject.Forms.dashboard.moonLabel27.Show();
-                    My.MyProject.Forms.dashboard.moonLabel28.Show();
-                    My.MyProject.Forms.dashboard.moonLabel29.Show();
-                    My.MyProject.Forms.dashboard.moonLabel30.Show();
-                    My.MyProject.Forms.dashboard.moonLabel31.Show();
-                    My.MyProject.Forms.dashboard.moonLabel32.Show();
-                    My.MyProject.Forms.dashboard.moonLabel33.Show();
-                    My.MyProject.Forms.dashboard.moonLabel34.Show();
-                    My.MyProject.Forms.dashboard.moonLabel35.Show();
-                    My.MyProject.Forms.dashboard.moonLabel36.Show();
-                    My.MyProject.Forms.dashboard.moonLabel37.Show();
-                    My.MyProject.Forms.dashboard.moonLabel38.Show();
-                    My.MyProject.Forms.dashboard.moonLabel39.Show();
-                    My.MyProject.Forms.dashboard.moonLabel40.Show();
-                    My.MyProject.Forms.dashboard.moonLabel41.Show();
+                    daboard.FoxButton5.Show();
+                    daboard.foxButton7.Show();
+                    daboard.foxButton8.Show();
+                    daboard.MoonLabel22.Show();
+                    daboard.MoonLabel23.Show();
+                    daboard.moonLabel26.Show();
+                    daboard.moonLabel27.Show();
+                    daboard.moonLabel28.Show();
+                    daboard.moonLabel29.Show();
+                    daboard.moonLabel30.Show();
+                    daboard.moonLabel31.Show();
+                    daboard.moonLabel32.Show();
+                    daboard.moonLabel33.Show();
+                    daboard.moonLabel34.Show();
+                    daboard.moonLabel35.Show();
+                    daboard.moonLabel36.Show();
+                    daboard.moonLabel37.Show();
+                    daboard.moonLabel38.Show();
+                    daboard.moonLabel39.Show();
+                    daboard.moonLabel40.Show();
+                    daboard.moonLabel41.Show();
                 }
 
                 if (argument == "-alert")
