@@ -1282,9 +1282,9 @@ namespace HRTime
             MoonLabel11.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel11.Location = new Point(7, 6);
             MoonLabel11.Name = "MoonLabel11";
-            MoonLabel11.Size = new Size(76, 22);
+            MoonLabel11.Size = new Size(79, 22);
             MoonLabel11.TabIndex = 0;
-            MoonLabel11.Text = "HRTime 0.1a";
+            MoonLabel11.Text = "HRTime 0.11a";
             // 
             // TabPage7
             // 
