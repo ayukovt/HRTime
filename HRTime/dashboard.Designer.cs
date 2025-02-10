@@ -620,9 +620,9 @@ namespace HRTime
             MoonLabel6.ForeColor = Color.FromArgb(98, 84, 129);
             MoonLabel6.Location = new Point(7, 6);
             MoonLabel6.Name = "MoonLabel6";
-            MoonLabel6.Size = new Size(128, 22);
+            MoonLabel6.Size = new Size(131, 22);
             MoonLabel6.TabIndex = 0;
-            MoonLabel6.Text = "Current version: 0.1a";
+            MoonLabel6.Text = "Current version: 0.11a";
             // 
             // TabPage5
             // 

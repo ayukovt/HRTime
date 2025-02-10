@@ -12,6 +12,7 @@ namespace HRTime
         private void OpenMenuItem_Click(object sender, System.EventArgs e)
         {
             HRTime.My.MyProject.Forms.dashboard.Show();
+            TrayIcon.Visible = false;
         }
 
         private void ExitMenuItem_Click(object sender, System.EventArgs e)

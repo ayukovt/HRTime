@@ -89,19 +89,19 @@ namespace HRTime
                 // Logic for setting settings for schedule
                 // As mentioned in the handler section, this is probably shit
                 // Look into adding a Windows Task Scheduler entry for a job that runs based on the given interval and displays a form
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DungeonComboBox1.SelectedItem, "day(s)", false)))
+                if (DungeonComboBox1.SelectedItem.ToString().Trim() == "day(s)")
                 {
                     My.MySettingsProperty.Settings.NextDoseDate = Conversions.ToString(DateTime.Now.AddDays(DungeonNumeric1.Value));
                     My.MySettingsProperty.Settings.INTERVAL_TYPE = "day";
                     My.MySettingsProperty.Settings.INTERVAL_VALUE = DungeonNumeric1.Value.ToString();
                 }
-                else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DungeonComboBox1.SelectedItem, "weeks(s)", false)))
+                else if (DungeonComboBox1.SelectedItem.ToString().Trim() == "week(s)")
                 {
                     My.MySettingsProperty.Settings.NextDoseDate = Conversions.ToString(DateTime.Now.AddDays(DungeonNumeric1.Value * 7L)); // + 7 from the given value as we're adding days, but this is for week. 1 * 7 = 7, 2 * 7 = 14 (2 weeks), 3 * 7 = 21 (3 weeks), etc
                     My.MySettingsProperty.Settings.INTERVAL_TYPE = "week";
                     My.MySettingsProperty.Settings.INTERVAL_VALUE = (DungeonNumeric1.Value * 7L).ToString();
                 }
-                else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DungeonComboBox1.SelectedItem, "months(s)", false)))
+                else if (DungeonComboBox1.SelectedItem.ToString().Trim() == "month(s)")
                 {
                     My.MySettingsProperty.Settings.NextDoseDate = Conversions.ToString(DateTime.Now.AddMonths((int)DungeonNumeric1.Value));
                     My.MySettingsProperty.Settings.INTERVAL_TYPE = "month";
