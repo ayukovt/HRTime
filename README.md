@@ -34,7 +34,7 @@ Go to [releases](http://github.com/ayukovt/HRTime/releases) and download the lat
 
 or just simply press this button idk:
 
-[![Download](https://ayuworks.xyz/thumb.png)](https://github.com/ayukovt/HRTime/releases/download/v0.1a/HRTime.zip)
+[![Download](https://ayuworks.xyz/thumb.png)](https://github.com/ayukovt/HRTime/releases/download/v0.11a/HRTime.zip)
 
 ##### Linux
 
